@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from './Home/Hero';
 import About from './Home/About';
-import Location from './Home/Location';
 import Objectives from './Home/Objectives';
 import Mission from './Home/Mission';
 import OurWork from './Home/OurWork';
@@ -16,7 +15,6 @@ const Home = () => {
                 <Objectives />
             </div>
             <OurWork />
-            <Location />
         </div>
     );
 };
