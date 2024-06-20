@@ -1,0 +1,61 @@
+.hero-banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-banner__content {
+    padding: 20px 30px;
+    color: white;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner__heading {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-banner__button {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-banner__cta {
+    background-color: #039a63;
+    color: white;
+    border: #039a63;
+    outline: #039a63;
+    display: inline-block;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero-banner__cta:hover {
+    background-color: #24a375;
+}
+
+.hero-banner {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../../assets/banner.jpg");
+}
+
+@media screen and (max-width:729px) {
+    .hero-banner__content {
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    .hero-banner__heading {
+        font-size: 2.5rem;
+        display: block;
+    }
+}

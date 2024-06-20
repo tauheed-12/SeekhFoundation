@@ -1,0 +1,128 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 75%;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+.about-image {
+    flex: 1;
+    padding: 40px;
+}
+
+.about-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50%;
+    gap: 2rem;
+    margin-top: 6rem;
+    margin-left: -6rem;
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    width: 75%;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 75%;
+}
+
+.about-button {
+    background-color: #039a63;
+    color: white;
+    border: #039a63;
+    outline: #039a63;
+    display: inline-block;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about-button:hover {
+    background-color: #d97706;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-container {
+        width: 100%;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 0;
+        max-width: 95%;
+    }
+
+    .about-image {
+        padding: 0;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin: 0;
+        gap: 5px;
+        padding: 0rem 0rem;
+    }
+
+    .about-text h1 {
+        font-size: 1rem;
+    }
+
+    .about-button {
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 729px) {
+    .about-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-image {
+        width: 100%;
+        flex: auto;
+        padding: 0;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 5px;
+        margin: 0;
+        background-color: #b8f7e0;
+    }
+}
