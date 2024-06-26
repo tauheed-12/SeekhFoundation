@@ -26,8 +26,12 @@ const Navbar = () => {
                 <Link to='/aboutUs'>
                     <NavLinks contentText="About Us" />
                 </Link>
+                <Link to='/projects'>
                 <NavLinks contentText="Projects" />
-                <NavLinks contentText="Get Involved" />
+                </Link>
+                <Link to='/getInvolve'>
+                <NavLinks contentText="Get Involved" />                    
+                </Link>
                 <NavLinks contentText="Resources" />
                 <NavLinks contentText="Contact Us" />
             </ul>
@@ -40,8 +44,12 @@ const Navbar = () => {
                     <Link to='/aboutUs'>
                         <NavLinks contentText="About Us" />
                     </Link>
+                    <Link to='/projects'>
                     <NavLinks contentText="Projects" />
-                    <NavLinks contentText="Get Involved" />
+                    </Link>
+                    <Link to='/getInvolve'>
+                    <NavLinks contentText="Get Involved" />                    
+                    </Link>
                     <NavLinks contentText="Resources" />
                     <NavLinks contentText="Contact Us" />
                 </ul>
