@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+
 .about-container {
     display: flex;
     align-items: center;
@@ -16,6 +18,19 @@
 .about-image {
     flex: 1;
     padding: 40px;
+    background-color: #FFF;
+    box-shadow: 0 0 0 1px rgba(#000, .05), 0 20px 50px 0 rgba(#000, .1);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 1.25rem;
+    position: relative;
+    transition: .15s ease-in;
+
+    &:hover,
+    &:focus-within {
+        box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);
+        transform: translatey(-10px);
+    }
 }
 
 .about-text {
@@ -27,6 +42,19 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     flex-direction: column;
+    background-color: #FFF;
+    box-shadow: 0 0 0 1px rgba(#000, .05), 0 20px 50px 0 rgba(#000, .1);
+    overflow: hidden;
+    position: relative;
+    transition: .4s ease-in;
+
+    &:hover,
+    &:focus-within {
+        box-shadow: 0 0 0 2px #03221a, 0 10px 60px 0 rgba(#b01e1e, .1);
+        transform: translatey(-20px);
+        border: 2px solid green;
+    }
+
     width: 100%;
     max-width: 50%;
     gap: 2rem;
@@ -63,6 +91,8 @@
 .about-button:hover {
     background-color: #d97706;
 }
+
+
 
 @media screen and (max-width: 1024px) {
     .about-container {

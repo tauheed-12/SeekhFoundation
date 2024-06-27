@@ -1,0 +1,55 @@
+.borders {
+    position: relative;
+}
+
+.borders::before,
+.borders::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
+
+.borders::before {
+    right: 0;
+    width: 0;
+    height: 3px;
+    background: #e9485f;
+    transition: width .2s .09s;
+}
+
+.borders::after {
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: linear-gradient(#f27c36, #e9485f);
+    transition: height .1s;
+}
+
+.borders:hover::before {
+    width: 100%;
+    transition: width .1s;
+}
+
+.borders:hover::after {
+    height: 100%;
+    transition: height .2s .09s;
+}
+
+.borders:hover .border::before {
+    width: 100%;
+    transition: width .35s .28s;
+}
+
+.borders:hover .border::after {
+    height: 100%;
+    transition: height .6s .63s ease-out;
+}
+
+.borders:hover .box {
+    box-shadow: 0 0 31px 0 rgba(105, 98, 109, .2);
+}
+
+.borders:hover svg {
+    opacity: 1;
+}
