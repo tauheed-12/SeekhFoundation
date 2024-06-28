@@ -1,61 +1,34 @@
 import React from 'react';
-import news1 from "../../assets/img1.jpg";
-import news2 from "../../assets/img2.jpg";
-import news3 from "../../assets/img3.jpg";
-import news4 from "../../assets/img4.jpg";
-import news5 from "../../assets/img8.jpg";
-import news6 from "../../assets/img10.jpg";
-import './OurWork.css'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import { allProjects } from '../../Data/Projects';
 const OurWork = () => {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className=" bg-green-100 flex flex-col justify-center items-center w-5/6 py-8 mb-4">
             <h1 className="text-4xl text-green-500 font-bold">Our Works</h1>
-            <div className="container">
-                <div className="card">
-                    <div className="image">
-                        <img src={news1} alt="Description" />
-                    </div>
-                    <div className="content">
-                        <h1>News1</h1>
-                        <h3>This is content</h3>
-                        <p>
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                        </p>
-                    </div>
+            <div className=" flex flex-row justify-center items-center px-16 py-8 my-4">
+                <div className=" flex-1 flex flex-col gap-4 text-lg font-sans">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Aenean nec eros velit. Curabitur vel bibendum arcu.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Aenean nec eros velit. Curabitur vel bibendum arcu.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Aenean nec eros velit. Curabitur vel bibendum arcu.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Aenean nec eros velit. Curabitur vel bibendum arcu.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Aenean nec eros velit. Curabitur vel bibendum arcu.
+                    </p>
                 </div>
-                <div className="card">
-                    <div className="image">
-                        <img src={news3} alt="Description" />
-                    </div>
-                    <div className="content">
-                        <h3>This is content</h3>
-                        <p>
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                        </p>
-                    </div>
-                </div>
-                <div className="card">
-                    <div className="image">
-                        <img src={news2} alt="Description" />
-                    </div>
-                    <div className="content">
-                        <h3>This is content</h3>
-                        <p>
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                        </p>
-                    </div>
-                </div>
-                <div className="card">
-                    <div className="image">
-                        <img src={news4} alt="Description" />
-                    </div>
-                    <div className="content">
-                        <h3>This is content</h3>
-                        <p>
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                        </p>
-                    </div>
-                </div>
+                <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay className="flex-1">
+                    {allProjects.map((project, index) => (
+                        <div key={index} className="w-full rounded-none">
+                            <img src={project.imageUrl} alt={project.title} className="h-80 object-cover w-full" />
+                            <div className="absolute bottom-0 left-0 right-0 bg-gray-800 bg-opacity-50 p-4">
+                                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                                <p className="text-white">{project.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </Carousel>
             </div>
         </div>
     );

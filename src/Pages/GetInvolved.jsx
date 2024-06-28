@@ -1,57 +1,74 @@
 import React from 'react';
 import img1 from "../assets/img4.jpg";
 import img3 from "../assets/banner.jpeg";
+import Hero from './Home/Hero';
+
+const InfoBlock = ({ title, paragraphs, listItems, buttonText, imgSrc, imgAlt, reverse }) => (
+    <div className={`bg-green-100 my-4 py-8 px-16 rounded-lg flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center mb-12 relative`}>
+        <div className="flex-1 mb-6">
+            <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg shadow-lg object-cover md:h-96 hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div className="flex-[2] md:px-6 text-center md:text-left mb-4 md:mb-0">
+            <h2 className="text-3xl font-bold text-green-500 mb-4">{title}</h2>
+            {paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-gray-700 mb-4">{paragraph}</p>
+            ))}
+            {listItems && (
+                <ul className="list-disc list-inside text-gray-700 mb-4">
+                    {listItems.map((item, index) => (
+                        <li key={index}><strong>{item.title}:</strong> {item.description}</li>
+                    ))}
+                </ul>
+            )}
+            {buttonText && (
+                <div className="flex justify-center md:justify-start">
+                    <button className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition-colors duration-300">{buttonText}</button>
+                </div>
+            )}
+        </div>
+    </div>
+);
 
 function GetInvolved() {
     return (
         <>
-            <section className="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mb-12 relative">
-                <div className="md:w-2/3 md:pr-6 text-center md:text-left mb-4 md:mb-0">
-                    <h2 className="text-3xl font-bold text-green-500 mb-4">Volunteer with Us</h2>
-                    <p className="text-gray-700 mb-4">
-                        Volunteering is a fantastic way to give back to the community, meet new people, and gain valuable skills. At Seekh Foundation, we have a variety of volunteer opportunities that cater to different interests and skill sets.
-                    </p>
-                    <p className="text-gray-700 mb-4">
-                        <strong>Why Volunteer with Us?</strong>
-                    </p>
-                    <ul className="list-disc list-inside text-gray-700 mb-4">
-                        <li><strong>Make a Difference:</strong> Contribute to meaningful causes and see the impact of your efforts firsthand.</li>
-                        <li><strong>Build Community:</strong> Connect with like-minded individuals and form lasting relationships.</li>
-                        <li><strong>Develop Skills:</strong> Gain experience in areas such as event planning, customer service, and more.</li>
-                    </ul>
-                    <div className="flex justify-center md:justify-start">
-                        <button className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition-colors duration-300">Volunteer</button>
-                    </div>
-                </div>
-                <div className="md:w-1/2 relative">
-                    <img src={img1} alt="Volunteers" className="w-full h-auto rounded-lg shadow-lg object-cover md:h-96 hover:scale-105 transition-transform duration-300" />
-                </div>
+            <Hero heading="Get Involved with us" subheading="Introduction to the foundation Projects." isButton={false} />
+
+            <section className="py-4 px-16">
+                <InfoBlock
+                    title="Volunteer with Us"
+                    paragraphs={[
+                        "Volunteering is a fantastic way to give back to the community, meet new people, and gain valuable skills. At Seekh Foundation, we have a variety of volunteer opportunities that cater to different interests and skill sets.",
+                        "Why Volunteer with Us?"
+                    ]}
+                    listItems={[
+                        { title: "Make a Difference", description: "Contribute to meaningful causes and see the impact of your efforts firsthand." },
+                        { title: "Build Community", description: "Connect with like-minded individuals and form lasting relationships." },
+                        { title: "Develop Skills", description: "Gain experience in areas such as event planning, customer service, and more." }
+                    ]}
+                    buttonText="Volunteer"
+                    imgSrc={img1}
+                    imgAlt="Volunteers"
+                />
             </section>
 
-            <section className="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-lg flex flex-col items-center mb-12">
-                <div className="w-full md:w-2/3 mb-6">
-                    <img src={img3} alt="Donation Impact" className="w-full h-auto rounded-lg shadow-lg object-cover md:h-96 hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="w-full md:w-2/3 md:pl-6 mb-6">
-                    <h2 className="text-3xl font-bold text-green-500 mb-4">Donate</h2>
-                    <p className="text-gray-700 mb-4">
-                        Your donations make a significant impact on our community. At Seekh Foundation, we ensure that every contribution is used efficiently to support our programs and initiatives. Your generosity helps us:
-                    </p>
-                    <ul className="list-disc list-inside text-gray-700 mb-4">
-                        <li><strong>Support Those in Need:</strong> Provide essential resources to individuals and families.</li>
-                        <li><strong>Fund Programs:</strong> Sustain educational, health, and social programs.</li>
-                        <li><strong>Promote Growth:</strong> Invest in community development projects.</li>
-                    </ul>
-                    <p className="text-gray-700 mb-4">
-                        Every donation, no matter the size, contributes to making a positive difference. Thank you for your support!
-                    </p>
-                </div>
-                <div className="bg-white p-4 shadow-lg flex flex-col items-center md:items-start">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Your Support Matters</h3>
-                    <p className="text-gray-600 mb-2">Help us continue our mission with your generous donation.</p>
-                    <button className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-green-600 transition-colors duration-300">Donate Now</button>
-                    <p className="text-sm text-gray-500 mt-2">Every donation makes a difference!</p>
-                </div>
+            <section className="px-16 py-4">
+                <InfoBlock
+                    title="Donate"
+                    paragraphs={[
+                        "Your donations make a significant impact on our community. At Seekh Foundation, we ensure that every contribution is used efficiently to support our programs and initiatives. Your generosity helps us:",
+                        "Every donation, no matter the size, contributes to making a positive difference. Thank you for your support!"
+                    ]}
+                    listItems={[
+                        { title: "Support Those in Need", description: "Provide essential resources to individuals and families." },
+                        { title: "Fund Programs", description: "Sustain educational, health, and social programs." },
+                        { title: "Promote Growth", description: "Invest in community development projects." }
+                    ]}
+                    buttonText="Donate"
+                    imgSrc={img3}
+                    imgAlt="Donation Impact"
+                    reverse
+                />
             </section>
 
             <section className="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-lg text-center mb-12">
