@@ -20,14 +20,14 @@ const Projects = () => {
           <span className="text-black p-1">Our</span> <span className="text-green-600">Projects</span>
         </h1>
 
-        <div className="mb-14 flex flex-col justify-center items-center py-4 px-20">
+        <div className="mb-14 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
           <h2 className="text-2xl font-semibold w-full text-left">
             <span className="text-black">Ongoing</span> <span className="text-green-500">Projects</span>
           </h2>
           <div className="w-full mb-4">
             <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-700"></div>
           </div>
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center flex-wrap flex-col md:fex-row gap-4">
             {ongoingProjects.map((project, index) => (
               <div key={index} className='flex flex-col justify-center items-center'>
                 <div className={`bg-${index % 2 === 0 ? 'white' : 'gray-100'} shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition duration-300`}>
@@ -43,14 +43,14 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="mb-24 flex flex-col justify-center items-center py-4 px-20">
+        <div className="mb-24 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
           <h2 className="text-2xl font-semibold w-full text-left">
             <span className="text-black">Completed</span> <span className="text-green-500">Projects</span>
           </h2>
           <div className="w-full mb-4">
             <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-700"></div>
           </div>
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center gap-4 flex-wrap flex-col sm:flex-row">
             {completedProjects.map((project, index) => (
               <div key={index} className='flex flex-col justify-center items-center'>
                 <div className={`bg-${index % 2 === 0 ? 'white' : 'gray-100'} shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition duration-300`}>

@@ -7,7 +7,7 @@ const AboutUs = () => {
         <div className="w-full">
             <Hero heading="About Seekh Foundation" subheading="Introduction to the foundation, its history, and mission" isButton={false} />
             <div className="p-4 mx-2 sm:mx-10 md:mx-20 my-6 bg-green-50 shadow-xl flex justify-center items-center flex-col md:flex-row">
-                <div className="flex-1 m-4 px-2 sm:px-5 md:px-10 py-2 sm:py-3 md:py-6">
+                <div className="flex-1 m-4 sm:px-5 md:px-10 py-2 sm:py-3 md:py-6">
                     <img src={mission1} alt='mission'></img>
                 </div>
                 <div className="flex-1 flex flex-col justify-center items-center gap-4">
