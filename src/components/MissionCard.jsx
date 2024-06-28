@@ -12,7 +12,7 @@ const MissionCard = ({ image, title, description }) => {
                 </figure>
 
             </div>
-            <div className="p-4">
+            <div className="p-4 pt-0">
                 <h3 className="font-bold text-xl mb-2">{title}</h3>
                 <p className="text-gray-700 text-base">{description}</p>
             </div>

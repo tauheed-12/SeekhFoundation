@@ -4,9 +4,9 @@ import { Carousel } from 'react-responsive-carousel';
 import { allProjects } from '../../Data/Projects';
 const OurWork = () => {
     return (
-        <div className=" sm:bg-green-100 flex flex-col justify-center items-center w-11/12 sm:w-5/6 py-2 sm:py-4 md:py-8 mb-4">
+        <div className=" sm:bg-gray-100 flex flex-col justify-center items-center w-11/12 sm:w-5/6 py-2 sm:py-4 md:py-8 mb-4">
             <h1 className="text-2xl sm:text-4xl text-green-500 font-bold">Our Works</h1>
-            <div className=" flex flex-col md:flex-row justify-center items-center px-6 sm:px-12 md:px-16 py-4 sm:py-8 sm:my-4">
+            <div className=" flex flex-col lg:flex-row justify-center items-center px-6 sm:px-12 md:px-16 py-4 sm:py-8 sm:my-4">
                 <div className=" flex-1 hidden sm:flex flex-col gap-4 text-lg font-sans">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Aenean nec eros velit. Curabitur vel bibendum arcu.

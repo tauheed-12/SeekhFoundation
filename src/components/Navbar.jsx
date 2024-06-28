@@ -14,12 +14,12 @@ const Navbar = () => {
 
     return (
         <div className="relative text-center px-2 sm:px-4 py-2 flex justify-center items-center shadow-md">
-            <button className="flex sm:hidden ml-2" onClick={handleClick} ><TfiAlignJustify /></button>
+            <button className="flex lg:hidden ml-2" onClick={handleClick} ><TfiAlignJustify /></button>
             <div className="flex-[1] px-2 py-2 font-bold text-xl sm:text-2xl">
                 <span>Seekh Buniyaad</span>
             </div>
 
-            <ul className="flex-[2] px-6 py-2 hidden sm:flex flex-row items-center gap-4  text-xl">
+            <ul className="flex-[2] px-6 py-2 hidden lg:flex flex-row items-center gap-4  text-xl">
                 <Link to='/'>
                     <NavLinks contentText="Home" />
                 </Link>
@@ -27,28 +27,28 @@ const Navbar = () => {
                     <NavLinks contentText="About Us" />
                 </Link>
                 <Link to='/projects'>
-                <NavLinks contentText="Projects" />
+                    <NavLinks contentText="Projects" />
                 </Link>
                 <Link to='/getInvolve'>
-                <NavLinks contentText="Get Involved" />                    
+                    <NavLinks contentText="Get Involved" />
                 </Link>
                 <NavLinks contentText="Resources" />
                 <NavLinks contentText="Contact Us" />
             </ul>
-            {isMenubar ? <div className="absolute top-12 left-0 lg:hidden flex flex-col bg-slate-200 font-semibold p-4 py-8">
+            {isMenubar ? <div className="absolute top-0 left-0 lg:hidden flex flex-col bg-slate-200 font-semibold p-4 sm:px-16 py-8 h-lvh z-50">
                 <TfiClose className='absolute top-2 right-2' onClick={() => { setMenubar(false) }} />
                 <ul>
-                    <Link to='/'>
+                    <Link to='/' onClick={() => { setMenubar(false) }}>
                         <NavLinks contentText="Home" />
                     </Link>
-                    <Link to='/aboutUs'>
+                    <Link to='/aboutUs' onClick={() => { setMenubar(false) }}>
                         <NavLinks contentText="About Us" />
                     </Link>
-                    <Link to='/projects'>
-                    <NavLinks contentText="Projects" />
+                    <Link to='/projects' onClick={() => { setMenubar(false) }}>
+                        <NavLinks contentText="Projects" />
                     </Link>
-                    <Link to='/getInvolve'>
-                    <NavLinks contentText="Get Involved" />                    
+                    <Link to='/getInvolve' onClick={() => { setMenubar(false) }}>
+                        <NavLinks contentText="Get Involved" />
                     </Link>
                     <NavLinks contentText="Resources" />
                     <NavLinks contentText="Contact Us" />

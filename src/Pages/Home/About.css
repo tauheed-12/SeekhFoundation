@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 20px;
 }
 
 .about-content {
@@ -47,14 +48,6 @@
     overflow: hidden;
     position: relative;
     transition: .4s ease-in;
-
-    &:hover,
-    &:focus-within {
-        box-shadow: 0 0 0 2px #03221a, 0 10px 60px 0 rgba(#b01e1e, .1);
-        transform: translatey(-20px);
-        border: 2px solid green;
-    }
-
     width: 100%;
     max-width: 50%;
     gap: 2rem;
@@ -106,7 +99,7 @@
     }
 
     .about-image {
-        padding: 0;
+        padding: 40px;
     }
 
     .about-text {
@@ -141,7 +134,11 @@
     .about-image {
         width: 100%;
         flex: auto;
+        margin-top: 0;
+        width: full;
         padding: 0;
+        height: 300px;
+        border-radius: 0;
     }
 
     .about-image img {
@@ -151,8 +148,8 @@
     .about-text {
         width: 100%;
         max-width: 100%;
-        padding: 10px 5px;
+        padding: 10px 2px;
         margin: 0;
-        background-color: #b8f7e0;
+        background-color: rgb(234, 231, 231);
     }
 }

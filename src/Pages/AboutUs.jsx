@@ -6,11 +6,11 @@ const AboutUs = () => {
     return (
         <div className="w-full">
             <Hero heading="About Seekh Foundation" subheading="Introduction to the foundation, its history, and mission" isButton={false} />
-            <div className="p-4 mx-2 sm:mx-10 md:mx-20 my-6 bg-green-50 shadow-xl flex justify-center items-center flex-col md:flex-row">
+            <div className="p-4 mx-2 sm:mx-10 md:mx-20 my-6 bg-green-50 shadow-xl flex justify-center items-center flex-col lg:flex-row">
                 <div className="flex-1 m-4 sm:px-5 md:px-10 py-2 sm:py-3 md:py-6">
                     <img src={mission1} alt='mission'></img>
                 </div>
-                <div className="flex-1 flex flex-col justify-center items-center gap-4">
+                <div className="flex-1 flex flex-col justify-center items-center gap-4 font-sans">
                     <h1 className="text-3xl font-bold">About Us</h1>
                     <p className="text-lg text-gray-600">Buniyaad is dedicated to ensuring every child has access to quality education regardless of their
                         background. We provide school supplies, scholarships, and tutoring to support academic excellence.

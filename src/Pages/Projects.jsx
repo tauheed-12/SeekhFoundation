@@ -3,11 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { allProjects, successStories } from '../Data/Projects';
 import Hero from './Home/Hero';
 
-
-
 const Projects = () => {
-
-
   const ongoingProjects = allProjects.filter(project => project.status === 'ongoing');
   const completedProjects = allProjects.filter(project => project.status === 'completed');
 
@@ -27,10 +23,10 @@ const Projects = () => {
           <div className="w-full mb-4">
             <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-700"></div>
           </div>
-          <div className="flex justify-center items-center flex-wrap flex-col md:fex-row gap-4">
-            {ongoingProjects.map((project, index) => (
-              <div key={index} className='flex flex-col justify-center items-center'>
-                <div className={`bg-${index % 2 === 0 ? 'white' : 'gray-100'} shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition duration-300`}>
+          <div className="flex justify-center items-center flex-wrap gap-4 flex-row sm:flex-col">
+            {ongoingProjects.map((project) => (
+              <div key={project.id} className='flex flex-col justify-center items-center'>
+                <div className={`bg-${project.id % 2 === 0 ? 'white' : 'gray-100'} shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition duration-300`}>
                   <img src={project.imageUrl} alt={project.title} className="w-full h-44 object-cover rounded-t-lg transition duration-300 transform hover:scale-105" />
                   <div className="py-4 px-4 flex flex-col justify-center items-center">
                     <h3 className="text-2xl font-bold mb-4 text-green-600">{project.title}</h3>
@@ -50,12 +46,12 @@ const Projects = () => {
           <div className="w-full mb-4">
             <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-700"></div>
           </div>
-          <div className="flex justify-center items-center gap-4 flex-wrap flex-col sm:flex-row">
-            {completedProjects.map((project, index) => (
-              <div key={index} className='flex flex-col justify-center items-center'>
-                <div className={`bg-${index % 2 === 0 ? 'white' : 'gray-100'} shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition duration-300`}>
-                  <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-t-lg transition duration-300 transform hover:scale-105" />
-                  <div className="p-4 flex flex-col justify-center items-center">
+          <div className="flex justify-center items-center flex-wrap gap-4 flex-row sm:flex-col">
+            {completedProjects.map((project) => (
+              <div key={project.id} className='flex flex-col justify-center items-center'>
+                <div className={`bg-${project.id % 2 === 0 ? 'white' : 'gray-100'} shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition duration-300`}>
+                  <img src={project.imageUrl} alt={project.title} className="w-full h-44 object-cover rounded-t-lg transition duration-300 transform hover:scale-105" />
+                  <div className="py-4 px-4 flex flex-col justify-center items-center">
                     <h3 className="text-2xl font-bold mb-4 text-green-600">{project.title}</h3>
                     <p className="text-gray-700 text-md mb-6">{project.description}</p>
                     <button className="bg-green-500 text-white px-4 py-2 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn More</button>
@@ -72,8 +68,8 @@ const Projects = () => {
           <span className="text-black p-1">Success</span> <span className="text-green-500">Stories</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {successStories.map((story, index) => (
-            <div key={index} className="flex flex-col justify-center items-center bg-gray-200 shadow-xl rounded-lg hover:shadow-2xl transition duration-300">
+          {successStories.map((story) => (
+            <div key={story.id} className="flex flex-col justify-center items-center bg-gray-200 shadow-xl rounded-lg hover:shadow-2xl transition duration-300">
               <img src={story.imageUrl} alt={story.name} className="w-24 h-24 object-cover rounded-full transition duration-300 transform hover:scale-105 -mt-8 z-10" />
               <div className="p-4">
                 <h3 className="text-2xl font-bold mb-2 text-green-600">{story.name}</h3>
@@ -83,7 +79,6 @@ const Projects = () => {
           ))}
         </div>
       </section>
-
     </>
   );
 };

@@ -1,27 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import left from "../../assets/left.png";
 import right from "../../assets/right.png";
 import MissionCard from '../../components/MissionCard';
 import mission1 from "../../assets/img12.jpg";
 import { missionArray } from '../../Data/Mission';
 
-
 const Mission = () => {
-
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [itemsToShow, setItemsToShow] = useState(3); // Default to 3 items for large screens
+
+    useEffect(() => {
+        const updateItemsToShow = () => {
+            if (window.innerWidth < 640) {
+                setItemsToShow(1); // Show 1 item for small screens
+            } else if (window.innerWidth < 1024) {
+                setItemsToShow(2); // Show 2 items for medium screens
+            } else {
+                setItemsToShow(3); // Show 3 items for large screens
+            }
+        };
+
+        updateItemsToShow();
+        window.addEventListener('resize', updateItemsToShow);
+
+        return () => window.removeEventListener('resize', updateItemsToShow);
+    }, []);
 
     const handleClick = (direction) => {
         const totalMissions = missionArray.length;
         if (direction === "left") {
-            setCurrentIndex((prevIndex) => (prevIndex - 3 + totalMissions) % totalMissions);
+            setCurrentIndex((prevIndex) => (prevIndex - itemsToShow + totalMissions) % totalMissions);
         } else {
-            setCurrentIndex((prevIndex) => (prevIndex + 3) % totalMissions);
+            setCurrentIndex((prevIndex) => (prevIndex + itemsToShow) % totalMissions);
         }
     };
 
     const renderMissions = () => {
         const totalMissions = missionArray.length;
-        const indices = [currentIndex, (currentIndex + 1) % totalMissions, (currentIndex + 2) % totalMissions];
+        const indices = Array.from({ length: itemsToShow }, (_, i) => (currentIndex + i) % totalMissions);
         return indices.map((index) => (
             <MissionCard
                 key={index}
@@ -31,6 +47,7 @@ const Mission = () => {
             />
         ));
     };
+
     return (
         <div className="my-6 mx-1 lg:mx-2 sm:mx-12 flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6">
             <p className="text-3xl lg:text-4xl font-bold">Our <span className="text-greenColor">Mission</span></p>
@@ -45,7 +62,7 @@ const Mission = () => {
                     onClick={() => handleClick("left")}
                     alt='left'
                 />
-                <div className="flex flex-row justify-center items-center gap-2 lg:gap-4 flex-wrap">
+                <div className="flex flex-row justify-center items-center gap-2 lg:gap-4">
                     {renderMissions()}
                 </div>
                 <img
@@ -56,7 +73,7 @@ const Mission = () => {
                 />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Mission
+export default Mission;
