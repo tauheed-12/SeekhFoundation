@@ -11,7 +11,12 @@ module.exports = {
       },
       textColor: {
         greenColor: '#039a63'
-      }
+      },
+      fontFamily: {
+        poppins: "poppins"
+      }, backgroundImage: {
+        'donate-bg': "url('./assets/img11.jpg')",
+      },
     },
   },
   plugins: [],

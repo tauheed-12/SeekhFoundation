@@ -11,19 +11,19 @@ const imgArray = [eductionImg, personalImg, documentImg, communityImg, spreadImg
 
 const Objectives = () => {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center bg-slate-100 py-12">
             <p className="text-3xl lg:text-4xl font-bold">
-                Our <span className="text-greenColor">Objectives</span>
+                Our <span className="text-red-900">Objectives</span>
             </p>
             <div className="flex flex-row px-2 py-8 gap-6 flex-wrap items-center justify-center">
                 {ObjectArray.map((objective, index) => (
                     <div
                         key={index}
-                        className="flex flex-col p-4 justify-center items-center h-72 w-10/12 sm:w-72 gap-6 shadow-lg borders"
+                        className="sm:h-72 flex-1 flex flex-col p-4 justify-center items-center gap-6 shadow-2xl borders bg-white rounded-2xl min-w-[300px] max-w-[400px]"
                     >
                         <p className="text-xl font-bold">{objective.title}</p>
                         <img src={imgArray[index]} alt={objective.title} className="w-14 h-14" />
-                        <p className="text-sm text-stone-400 w-3/4 text-center">{objective.description}</p>
+                        <p className=" text-stone-400 w-3/4 text-center">{objective.description}</p>
                     </div>
                 ))}
             </div>

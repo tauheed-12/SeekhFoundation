@@ -1,33 +1,47 @@
 import React from 'react';
+import logoimg from '../assets/LOGO.png';
 
 const Footer = () => {
     return (
-        <div className="w-full py-8 px-8 flex flex-col gap-6 bg-black text-white">
-            <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div className="p-4 text-lg md:text-xl">
-                    <p>Batla House Okhla Nagar, New Delhi 273162</p>
-                    <div className="mt-2">
-                        <p>Join us as:</p>
-                        <div className="flex gap-2 mt-1">
-                            <span className="hover:underline cursor-pointer">Volunteer</span>
-                            <span className="hover:underline cursor-pointer">Donate</span>
-                        </div>
-                    </div>
+        <div>
+            <div className="flex flex-row flex-wrap gap-5 justify-between px-6 py-8 bg-slate-200 font-poppins">
+                <div className="flex flex-col gap-3">
+                    <img src={logoimg} className="w-12 h-12" alt='footer img' />
+                    <p className="text-xl font-semibold text-gray-700">Join us in making a difference in the lives of those in need</p>
+                    <p><span className="text-xl font-bold mr-2">Addresss:</span>Batla House Okhla New Delhi</p>
+                    <p><span className="text-xl font-bold mr-2">Phone</span>+91 7502949908023</p>
+                    <p><span className="text-xl font-bold mr-2">Email</span>contactus@gmail.com</p>
                 </div>
-                <div className="flex flex-wrap p-4 gap-4 text-center md:text-left">
-                    <span className="hover:underline cursor-pointer">Home</span>
-                    <span className="hover:underline cursor-pointer">About</span>
-                    <span className="hover:underline cursor-pointer">Resources</span>
-                    <span className="hover:underline cursor-pointer">Get Involved</span>
-                    <span className="hover:underline cursor-pointer">Projects</span>
-                    <span className="hover:underline cursor-pointer">Contact Us</span>
+                <div className="flex flex-col gap-3">
+                    <h3 className="text-xl font-semibold">Quick Links</h3>
+                    <ul className="flex flex-col gap-2">
+                        <li className="cursor-pointer">Home</li>
+                        <li className="cursor-pointer">About</li>
+                        <li className="cursor-pointer">Projects</li>
+                        <li className="cursor-pointer">Get Involved</li>
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-3">
+                    <h3 className="text-xl font-semibold">Supports</h3>
+                    <ul className="flex flex-col gap-2">
+                        <li className="cursor-pointer">Help & FAQ</li>
+                        <li className="cursor-pointer">Causes</li>
+                        <li className="cursor-pointer">Events</li>
+                        <li className="cursor-pointer">Contact Us</li>
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-3">
+                    <h3 className="text-xl font-semibold">Connect with us</h3>
+                    <ul className="flex flex-col gap-2">
+                        <li className="cursor-pointer">Watsapp</li>
+                        <li className="cursor-pointer">Twitter</li>
+                        <li className="cursor-pointer">Instagram</li>
+                        <li className="cursor-pointer">LinkedIn</li>
+                    </ul>
                 </div>
             </div>
-            <div className="h-0.5 bg-white w-full"></div>
-            <div className="flex gap-4 items-center justify-center">
-                <span className="hover:underline cursor-pointer">Instagram</span>
-                <span className="hover:underline cursor-pointer">WhatsApp</span>
-                <span className="hover:underline cursor-pointer">Email</span>
+            <div className="flex justify-center items-center py-6 bg-red-700 text-white font-poppins px-3">
+                <p>Designed and developed with love by Mohd Tauheed</p>
             </div>
         </div>
     );

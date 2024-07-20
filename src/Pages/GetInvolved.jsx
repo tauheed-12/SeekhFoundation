@@ -9,7 +9,7 @@ const InfoBlock = ({ title, paragraphs, listItems, buttonText, imgSrc, imgAlt, r
             <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg shadow-lg object-cover md:h-96 hover:scale-105 transition-transform duration-300" />
         </div>
         <div className="flex-[2] md:px-6 text-center md:text-left mb-4 md:mb-0">
-            <h2 className="text-3xl font-bold text-green-500 mb-4">{title}</h2>
+            <h2 className="text-3xl font-bold text-red-500 mb-4">{title}</h2>
             {paragraphs.map((paragraph, index) => (
                 <p key={index} className="text-gray-700 mb-4">{paragraph}</p>
             ))}
@@ -22,7 +22,7 @@ const InfoBlock = ({ title, paragraphs, listItems, buttonText, imgSrc, imgAlt, r
             )}
             {buttonText && (
                 <div className="flex justify-center md:justify-start">
-                    <button className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition-colors duration-300">{buttonText}</button>
+                    <button className="bg-red-500 text-white py-2 px-6 rounded-md hover:bg-red-600 transition-colors duration-300">{buttonText}</button>
                 </div>
             )}
         </div>

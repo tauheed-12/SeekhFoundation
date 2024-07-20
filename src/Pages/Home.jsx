@@ -4,6 +4,7 @@ import About from './Home/About';
 import Objectives from './Home/Objectives';
 import Mission from './Home/Mission';
 import OurWork from './Home/OurWork';
+import Donate from './Home/Donate';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <div>
                 <Objectives />
             </div>
+            <Donate />
             <OurWork />
         </div>
     );
