@@ -40,7 +40,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="flex justify-center items-center py-6 bg-red-700 text-white font-poppins px-3">
+            <div className="flex justify-center items-center py-6 bg-green-700 text-white font-poppins px-3">
                 <p>Designed and developed with love by Mohd Tauheed</p>
             </div>
         </div>

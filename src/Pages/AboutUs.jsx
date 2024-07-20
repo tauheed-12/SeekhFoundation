@@ -25,27 +25,27 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center px-3 md:px-4 lg:px-6 py-4 md:py-10">
-                <h2 className="text-3xl text-black font-semibold">Meet <span className="text-red-900">Our Teams</span></h2>
+                <h2 className="text-3xl text-black font-semibold">Meet <span className="text-green-700">Our Teams</span></h2>
                 <div className="flex flex-row justify-center items-center gap-4 flex-wrap mt-4">
                     <div className="flex flex-col justify-center items-center max-w-[300px] relative rounded-xl">
                         <img src={org1} alt='img1' />
-                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-red-800 w-full text-center">Founder</p>
+                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-green-800 w-full text-center">Founder</p>
                     </div>
                     <div className="flex flex-col justify-center items-center max-w-[300px] relative rounded-xl">
                         <img src={org1} alt='img1' />
-                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-red-800 w-full text-center">Co-Founder</p>
+                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-green-800 w-full text-center">Co-Founder</p>
                     </div>
                     <div className="flex flex-col justify-center items-center max-w-[300px] relative rounded-xl">
                         <img src={org1} alt='img1' />
-                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-red-800 w-full text-center">Marketing Head</p>
+                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-green-800 w-full text-center">Marketing Head</p>
                     </div>
                     <div className="flex flex-col justify-center items-center max-w-[300px] relative rounded-xl">
                         <img src={org1} alt='img1' />
-                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-red-800 w-full text-center">Operation head</p>
+                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-green-800 w-full text-center">Operation head</p>
                     </div>
                     <div className="flex flex-col justify-center items-center max-w-[300px] relative rounded-xl">
                         <img src={org1} alt='img1' />
-                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-red-800 w-full text-center">Finance Head</p>
+                        <p className="absolute bottom-0 py-4 text-xl md:text-2xl font-poppins text-white bg-green-800 w-full text-center">Finance Head</p>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ const About = () => {
                 <img src={imgbg} alt='imgbg' />
             </div>
             <div className="flex-1 ml-8 font-poppins pr-4 md:pr-0">
-                <h1 className="text-2xl text-red-800 font-semibold mb-4">Transforming Lives through Education and Empowerment</h1>
+                <h1 className="text-2xl text-green-800 font-semibold mb-4">Transforming Lives through Education and Empowerment</h1>
                 <p>
                     Project Buniyaad is dedicated to transforming the lives of the Batla House Juggi community by addressing their most pressing needs. Our mission is to provide access to quality education, ensuring that every child in the community has the opportunity to learn and grow in a supportive environment.
                 </p>
@@ -19,7 +19,7 @@ const About = () => {
                 </p>
                 <p>
                     <Link to='/about'>
-                        <button className="bg-red-800 text-white px-4 py-[10px] rounded-lg mt-4">
+                        <button className="bg-green-700 text-white px-4 py-[10px] rounded-lg mt-4">
                             Learn More
                         </button>
                     </Link>

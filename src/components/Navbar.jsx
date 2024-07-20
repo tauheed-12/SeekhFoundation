@@ -56,7 +56,12 @@ const Navbar = () => {
                                 Get Involved
                             </NavLink>
                         </li>
-                        <button className="border-solid border-red-600 border-2 px-4 py-2">Donate Now</button>
+                        <li>
+                            <NavLink to='/gallery' className={({ isActive }) => isActive ? "text-red-900" : "text-black"}>
+                                Gallery
+                            </NavLink>
+                        </li>
+                        <button className="border-solid border-green-600 border-2 px-4 py-2 text-white bg-green-600">Donate Now</button>
                     </ul>
                     <FiAlignJustify className="flex md:hidden text-2xl" onClick={() => setIsNavbarOpen(true)} aria-label="Open Menu" />
                 </div>
@@ -83,6 +88,11 @@ const Navbar = () => {
                     <li>
                         <NavLink to='/getInvolved' className={({ isActive }) => isActive ? "text-red-900" : "text-white"}>
                             Get Involved
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/gallery' className={({ isActive }) => isActive ? "text-red-900" : "text-white"}>
+                            Gallery
                         </NavLink>
                     </li>
                     <button className="border-solid border-white border-2 px-2 md:px-4 py-1 md:py-2">Donate Now</button>

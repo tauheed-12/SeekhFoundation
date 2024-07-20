@@ -28,10 +28,10 @@
 }
 
 .hero-banner__cta {
-    background-color: red;
+    background-color: green;
     color: white;
-    border: rgb(230, 54, 54);
-    outline: rgb(194, 18, 18);
+    border: rgb(14, 176, 14);
+    outline: rgb(16, 177, 16);
     display: inline-block;
     padding: 10px 25px;
     text-align: center;
@@ -40,7 +40,7 @@
 }
 
 .hero-banner__cta:hover {
-    background-color: rgb(235, 103, 103);
+    background-color: rgb(36, 203, 36);
     box-shadow: inset 200px 0 0 0 #033422;
 }
 

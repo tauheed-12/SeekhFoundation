@@ -9,7 +9,7 @@ const ProjectCard = ({ imgSrc, tag, title, description, date, author }) => {
             </div>
             <div className="lg:flex-1 flex flex-col gap-2 p-4">
                 <div className="flex flex-col gap-2">
-                    <p className="text-red-600 italic font-semibold">#{tag}</p>
+                    <p className="text-green-800 italic font-semibold">#{tag}</p>
                     <h3 className=" text-xl md:text-2xl font-semibold">{title}</h3>
                     <p className="text-gray-600 font-semibold">{description}</p>
                 </div>

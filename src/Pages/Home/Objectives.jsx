@@ -13,13 +13,13 @@ const Objectives = () => {
     return (
         <div className="flex flex-col justify-center items-center bg-slate-100 py-12">
             <p className="text-3xl lg:text-4xl font-bold">
-                Our <span className="text-red-900">Objectives</span>
+                Our <span className="text-green-700">Objectives</span>
             </p>
             <div className="flex flex-row px-2 py-8 gap-6 flex-wrap items-center justify-center">
                 {ObjectArray.map((objective, index) => (
                     <div
                         key={index}
-                        className="sm:h-72 flex-1 flex flex-col p-4 justify-center items-center gap-6 shadow-2xl borders bg-white rounded-2xl min-w-[300px] max-w-[400px]"
+                        className="lg:h-78 flex-1 flex flex-col p-4 py-8 lg:py-8 justify-center items-center gap-6 shadow-2xl borders bg-white rounded-2xl min-w-[300px] max-w-[400px]"
                     >
                         <p className="text-xl font-bold">{objective.title}</p>
                         <img src={imgArray[index]} alt={objective.title} className="w-14 h-14" />
