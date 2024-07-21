@@ -86,27 +86,37 @@ const Navbar = () => {
                 <FiX className="text-xl mb-4" onClick={() => setIsNavbarOpen(false)} aria-label="Close Menu" />
                 <ul className="flex flex-col gap-4 text-lg items-end justify-start font-semibold">
                     <li>
-                        <NavLink to='/' className={({ isActive }) => isActive ? "text-red-900" : "text-white"}>
+                        <NavLink to='/'
+                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            onClick={() => setIsNavbarOpen(false)}>
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/about' className={({ isActive }) => isActive ? "text-red-900" : "text-white"}>
+                        <NavLink to='/about'
+                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            onClick={() => setIsNavbarOpen(false)}>
                             About
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/projects' className={({ isActive }) => isActive ? "text-red-900" : "text-white"}>
+                        <NavLink to='/projects'
+                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            onClick={() => setIsNavbarOpen(false)}>
                             Projects
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/getInvolved' className={({ isActive }) => isActive ? "text-red-900" : "text-white"}>
+                        <NavLink to='/getInvolved'
+                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            onClick={() => setIsNavbarOpen(false)}>
                             Get Involved
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/gallery' className={({ isActive }) => isActive ? "text-red-900" : "text-white"}>
+                        <NavLink to='/gallery'
+                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            onClick={() => setIsNavbarOpen(false)}>
                             Gallery
                         </NavLink>
                     </li>
