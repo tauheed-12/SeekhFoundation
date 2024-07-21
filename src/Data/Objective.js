@@ -14,4 +14,8 @@ export const ObjectArray = [{
     img: 'communityImg',
     title: 'Community Engagement',
     description: 'Organize awareness campaigns, workshops for parents, and community events to encourage active participation in a child’s education and development.'
+}, {
+    img: 'healtImg',
+    title: 'Health For All',
+    description: '"Health for All" ensures quality healthcare for underserved communities by offering services, education, and improved infrastructure, while advocating for equity to reduce disparities.'
 }]

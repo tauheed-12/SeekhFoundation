@@ -11,25 +11,25 @@ const OurWork = () => {
     const projects = [
         {
             imgSrc: img1,
-            tag: 'Nutrition',
-            title: 'Healthy food and nutrition among all the children',
-            description: 'Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod...',
+            tag: 'Health',
+            title: 'Organised Eye checkup camp in the resources centre for the Slum people.',
+            description: 'Organizing such a camp can significantly impact the community by detecting...',
             date: '26/01/2021',
             author: 'Admin'
         },
         {
             imgSrc: img2,
-            tag: 'Education',
-            title: 'Educational resources for underprivileged children',
-            description: 'Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod...',
+            tag: 'Health',
+            title: 'Conduct Session on menstrual hygiene and health.',
+            description: 'Conducted Session on menstrual hygiene and health with women of urban slums and...',
             date: '14/02/2021',
             author: 'Admin'
         },
         {
             imgSrc: img3,
-            tag: 'Health',
-            title: 'Community health and wellness programs',
-            description: 'Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod...',
+            tag: 'Eduaction',
+            title: 'Educational Visit to Jamia Millia Islamia College',
+            description: 'Organized an educational visit for slum children to Jamia Millia Islamia College to...',
             date: '05/03/2021',
             author: 'Admin'
         }

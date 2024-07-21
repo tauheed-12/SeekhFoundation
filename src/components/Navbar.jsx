@@ -1,7 +1,7 @@
 import { IoMdMail } from "react-icons/io";
 import { FaPhoneAlt, FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-import navlogo from '../assets/LOGO.png';
+import { Link, NavLink } from "react-router-dom";
+import navlogo2 from '../assets/logo2.png';
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import { useState, useEffect } from "react";
 
@@ -27,26 +27,27 @@ const Navbar = () => {
                 <div className="hidden md:flex flex-row items-center justify-between px-6 py-0">
                     <div className="flex flex-row items-center">
                         <div className="flex flex-row items-center gap-2">
-                            <IoMdMail /><span className="text-gray-600">contactus@gmail.com</span>
+                            <IoMdMail /><span className="text-gray-600">foundationseekh@gmail.com</span>
                         </div>
                         <div className="border-l-black border-solid border-l-2 h-4 m-4"></div>
                         <div className="flex flex-row items-center gap-2">
-                            <FaPhoneAlt /><span className="text-gray-600">+91 1023458233</span>
+                            <FaPhoneAlt /><span className="text-gray-600">+91 7530860796</span>
                         </div>
                         <div className="border-l-black border-solid border-l-2 h-4 m-4"></div>
                         <div className="text-gray-600">FAQs</div>
                     </div>
                     <div className="flex flex-row items-center gap-2">
-                        <FaFacebook />
-                        <FaTwitter />
-                        <FaLinkedin />
-                        <FaInstagram />
+                        <Link to=''><FaFacebook /></Link>
+                        <Link to='https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09'><FaTwitter /></Link>
+                        <Link to='https://www.linkedin.com/company/seekhfoundation/'><FaLinkedin /></Link>
+                        <Link><FaInstagram /></Link>
                     </div>
                 </div>
                 <hr />
                 <div className={` bg-white flex flex-row items-center justify-between px-6 py-2 ${scrolled ? 'fixed top-0 w-full z-50' : ''}`}>
-                    <div>
-                        <img src={navlogo} alt="Logo" className="h-12 w-16" />
+                    <div className="flex flex-row gap-2 justify-center flex-wrap items-center">
+                        {/* <img src={navlogo} alt="Logo" className="h-12 w-16" /> */}
+                        <img src={navlogo2} alt="" className="h-8 w-[185px] lg:h-12 lg:w-full" />
                     </div>
                     <ul className="hidden md:flex flex-row gap-8 text-lg items-center">
                         <li>

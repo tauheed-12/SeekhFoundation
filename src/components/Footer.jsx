@@ -1,5 +1,6 @@
 import React from 'react';
 import logoimg from '../assets/LOGO.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -8,17 +9,25 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                     <img src={logoimg} className="w-12 h-12" alt='footer img' />
                     <p className="text-xl font-semibold text-gray-700">Join us in making a difference in the lives of those in need</p>
-                    <p><span className="text-xl font-bold mr-2">Addresss:</span>Batla House Okhla New Delhi</p>
-                    <p><span className="text-xl font-bold mr-2">Phone</span>+91 7502949908023</p>
-                    <p><span className="text-xl font-bold mr-2">Email</span>contactus@gmail.com</p>
+                    <p><span className="text-xl font-bold mr-2">Addresss:</span>C-48,4th Floor, Abul Fazal Enclave-1, High Tension Road,Jamia Nagar, Okhla, South Delhi- 110025</p>
+                    <p><span className="text-xl font-bold mr-2">Phone</span>+91 7530860796</p>
+                    <p><span className="text-xl font-bold mr-2">Email</span>foundationseekh@gmail.com</p>
                 </div>
                 <div className="flex flex-col gap-3">
                     <h3 className="text-xl font-semibold">Quick Links</h3>
                     <ul className="flex flex-col gap-2">
-                        <li className="cursor-pointer">Home</li>
-                        <li className="cursor-pointer">About</li>
-                        <li className="cursor-pointer">Projects</li>
-                        <li className="cursor-pointer">Get Involved</li>
+                        <li className="cursor-pointer">
+                            <Link to='/'>Home</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link to='/about'>About</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link to='/projects'>Projects</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link to='/getInvolved'>Get Involved</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="flex flex-col gap-3">
@@ -33,10 +42,18 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                     <h3 className="text-xl font-semibold">Connect with us</h3>
                     <ul className="flex flex-col gap-2">
-                        <li className="cursor-pointer">Watsapp</li>
-                        <li className="cursor-pointer">Twitter</li>
-                        <li className="cursor-pointer">Instagram</li>
-                        <li className="cursor-pointer">LinkedIn</li>
+                        <li className="cursor-pointer">
+                            <Link>Facebook</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link to='https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09'>Twitter</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link>Instagram</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link to='https://www.linkedin.com/company/seekhfoundation/'>LinkedIn</Link>
+                        </li>
                     </ul>
                 </div>
             </div>

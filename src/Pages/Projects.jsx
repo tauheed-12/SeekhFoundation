@@ -8,7 +8,7 @@ const Projects = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
-  const ongoingProjects = allProjects.filter(project => project.status === 'ongoing');
+  // const ongoingProjects = allProjects.filter(project => project.status === 'ongoing');
   const completedProjects = allProjects.filter(project => project.status === 'completed');
 
   return (
@@ -20,7 +20,7 @@ const Projects = () => {
           <span className="text-black p-1">Our</span> <span className="text-green-700">Projects</span>
         </h1>
 
-        <div className="mb-14 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
+        {/* <div className="mb-14 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
           <h2 className="text-2xl font-semibold w-full text-left">
             <span className="text-black">Ongoing</span> <span className="text-green-700">Projects</span>
           </h2>
@@ -41,7 +41,7 @@ const Projects = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="mb-24 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
           <h2 className="text-2xl font-semibold w-full text-left">
@@ -50,15 +50,17 @@ const Projects = () => {
           <div className="w-full mb-4">
             <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-700"></div>
           </div>
-          <div className="flex justify-center items-center gap-4 flex-wrap lg:flex-nowrap flex-row">
+          <div className="flex justify-center items-center gap-4 flex-wrap flex-row">
             {completedProjects.map((project, id) => (
-              <div key={id} className='flex flex-col justify-center items-center'>
-                <div className={`bg-${project.id % 2 === 0 ? 'white' : 'gray-100'} shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition duration-300`}>
-                  <img src={project.imageUrl} alt={project.title} className="w-full h-44 object-cover rounded-t-lg transition duration-300 transform hover:scale-105" />
-                  <div className="py-4 px-4 flex flex-col justify-center items-center">
+              <div key={id} className='flex flex-row justify-center items-center mt-5 bg-slate-200 p-4'>
+                <div className={`bg-${project.id % 2 === 0 ? 'white' : 'gray-100'}  rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col md:flex-row justify-center items-center`}>
+                  <div className="bg-slate-300 flex-1 flex justify-center items-center h-full p-6">
+                    <img src={project.imageUrl} alt={project.title} className="rounded-t-lg transition duration-300 transform hover:scale-105" />
+                  </div>
+                  <div className="bg-slate-200 flex-[2] px-4 h-full flex flex-col justify-center items-center">
                     <h3 className="text-2xl font-bold mb-4 text-green-600">{project.title}</h3>
                     <p className="text-gray-700 text-md mb-6">{project.description}</p>
-                    <button className="bg-green-700 text-white px-4 py-2 rounded-full text-sm hover:bg-green-900 transition duration-300">Learn More</button>
+                    {/* <button className="bg-green-700 text-white px-4 py-2 rounded-full text-sm hover:bg-green-900 transition duration-300">Learn More</button> */}
                   </div>
                 </div>
               </div>

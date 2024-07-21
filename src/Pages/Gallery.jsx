@@ -7,6 +7,7 @@ import img4 from '../assets/gallery3.jpg';
 import img5 from '../assets/gallery4.jpg';
 import img6 from '../assets/gallery5.jpg';
 import img7 from '../assets/gallery6.jpg';
+import Hero from './Home/Hero';
 
 const Gallery = () => {
     useEffect(() => {
@@ -23,16 +24,19 @@ const Gallery = () => {
     ];
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold mb-8 text-center">Gallery</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {images.map((image, index) => (
-                    <div key={index} className="w-full h-64 bg-gray-200">
-                        <img src={image} alt={`img${index}`} className="w-full h-full object-cover" />
-                    </div>
-                ))}
+        <>
+            <Hero heading="Gallery" subheading="Some of our best memories" isButton={false} />
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-3xl font-bold mb-8 text-center">Gallery</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {images.map((image, index) => (
+                        <div key={index} className="w-full h-64 bg-gray-200">
+                            <img src={image} alt={`img${index}`} className="w-full h-full object-cover" />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

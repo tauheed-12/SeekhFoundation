@@ -11,10 +11,10 @@ const About = () => {
             <div className="flex-1 ml-8 font-poppins pr-4 md:pr-0">
                 <h1 className="text-2xl text-green-800 font-semibold mb-4">Transforming Lives through Education and Empowerment</h1>
                 <p>
-                    Project Buniyaad is dedicated to transforming the lives of the Batla House Juggi community by addressing their most pressing needs. Our mission is to provide access to quality education, ensuring that every child in the community has the opportunity to learn and grow in a supportive environment.
+                    We are an NGO founded by a team of professional social workers. Our goal is to harness education's power for the greater good. We envision a world where kindness is abundant, education fuels positive change, and hope guides us all.
                 </p>
                 <p>
-                    In addition to education, Project Buniyaad assists community members in obtaining essential documents, such as birth certificates, Aadhar cards, and ration cards, which are crucial for accessing various government services and benefits.
+                    Join us in turning aspirations into action and making this vision a reality. Together, we illuminate the path to a brighter future at SEEKH Foundation.
                 </p>
                 <p>
                     <Link to='/about'>
