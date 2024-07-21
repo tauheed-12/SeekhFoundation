@@ -16,8 +16,8 @@ const Projects = () => {
       <div className="">
         <Hero heading="Our Projects" subheading="Introduction to the foundation Projects." isButton={false} />
 
-        <h1 className="text-5xl font-bold my-6 text-center">
-          <span className="text-black p-1">Our</span> <span className="text-green-700">Projects</span>
+        <h1 className="text-3xl md:text-5xl font-bold my-6 text-center">
+          <span className="text-black p-1">Our</span> <span className="text-green-700">Events</span>
         </h1>
 
         {/* <div className="mb-14 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
