@@ -1,9 +1,13 @@
 import React from 'react';
 import Hero from './Home/Hero';
 import mission1 from "../assets/img12.jpg";
-import org1 from "../assets/org1.jpg"
+import org1 from "../assets/org1.jpg";
+import { useEffect } from 'react';
 
 const AboutUs = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     return (
         <div className="w-full">
             <Hero heading="About Seekh Foundation" subheading="Introduction to the foundation, its history, and mission" isButton={false} />

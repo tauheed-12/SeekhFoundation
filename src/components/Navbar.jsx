@@ -3,10 +3,23 @@ import { FaPhoneAlt, FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "reac
 import { NavLink } from "react-router-dom";
 import navlogo from '../assets/LOGO.png';
 import { FiAlignJustify, FiX } from "react-icons/fi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 100) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+    })
 
     return (
         <div className="relative">
@@ -31,7 +44,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <hr />
-                <div className="flex flex-row items-center justify-between px-6 py-2">
+                <div className={` bg-white flex flex-row items-center justify-between px-6 py-2 ${scrolled ? 'fixed top-0 w-full z-50' : ''}`}>
                     <div>
                         <img src={navlogo} alt="Logo" className="h-12 w-16" />
                     </div>
@@ -67,7 +80,7 @@ const Navbar = () => {
                 </div>
             </nav>
             <div className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${isNavbarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsNavbarOpen(false)}></div>
-            <nav className={`flex md:hidden fixed top-0 right-0 bg-red-600 text-white h-screen z-50 p-4 transition-transform duration-300 ${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <nav className={`flex md:hidden fixed top-0 right-0 bg-green-700 text-white h-screen z-50 p-4 pr-8 transition-transform duration-300 ${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <FiX className="text-xl mb-4" onClick={() => setIsNavbarOpen(false)} aria-label="Close Menu" />
                 <ul className="flex flex-col gap-4 text-lg items-end justify-start font-semibold">
                     <li>
@@ -95,7 +108,7 @@ const Navbar = () => {
                             Gallery
                         </NavLink>
                     </li>
-                    <button className="border-solid border-white border-2 px-2 md:px-4 py-1 md:py-2">Donate Now</button>
+                    <button className="border-solid border-white border-2 bg-green-900 px-2 md:px-4 py-1 md:py-2">Donate Now</button>
                 </ul>
             </nav>
         </div>

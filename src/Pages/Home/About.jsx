@@ -1,5 +1,4 @@
 import React from 'react';
-import './About.css';
 import imgbg from "../../assets/imgbg.png";
 import { Link } from 'react-router-dom';
 

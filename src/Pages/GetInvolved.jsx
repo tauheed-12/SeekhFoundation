@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import img1 from "../assets/img4.jpg";
 import img3 from "../assets/banner.jpeg";
 import Hero from './Home/Hero';
@@ -30,6 +31,9 @@ const InfoBlock = ({ title, paragraphs, listItems, buttonText, imgSrc, imgAlt, r
 );
 
 function GetInvolved() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     return (
         <>
             <Hero heading="Get Involved with us" subheading="Introduction to the foundation Projects." isButton={false} />

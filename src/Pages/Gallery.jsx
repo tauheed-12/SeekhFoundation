@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import img1 from '../assets/galler7.jpg';
 import img2 from '../assets/gallery1.jpg';
 import img3 from '../assets/gallery2.jpg';
@@ -8,6 +9,9 @@ import img6 from '../assets/gallery5.jpg';
 import img7 from '../assets/gallery6.jpg';
 
 const Gallery = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     const images = [
         img1,
         img2,

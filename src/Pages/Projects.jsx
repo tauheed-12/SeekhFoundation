@@ -1,9 +1,13 @@
 import React from 'react';
+import { useEffect } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { allProjects, successStories } from '../Data/Projects';
 import Hero from './Home/Hero';
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   const ongoingProjects = allProjects.filter(project => project.status === 'ongoing');
   const completedProjects = allProjects.filter(project => project.status === 'completed');
 

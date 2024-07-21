@@ -1,11 +1,10 @@
 import React from 'react';
-import { ObjectArray } from '../../Data/Objective'; // Ensure the correct import path
+import { ObjectArray } from '../../Data/Objective';
 import eductionImg from '../../assets/education.jpeg';
 import communityImg from '../../assets/Community.jpeg';
 import documentImg from '../../assets/document.png';
 import personalImg from '../../assets/personalDev.jpeg';
 import spreadImg from '../../assets/spread.jpg';
-import './Objectives.css'; // Ensure the CSS file is imported
 
 const imgArray = [eductionImg, personalImg, documentImg, communityImg, spreadImg];
 
@@ -19,7 +18,7 @@ const Objectives = () => {
                 {ObjectArray.map((objective, index) => (
                     <div
                         key={index}
-                        className="lg:h-78 flex-1 flex flex-col p-4 py-8 lg:py-8 justify-center items-center gap-6 shadow-2xl borders bg-white rounded-2xl min-w-[300px] max-w-[400px]"
+                        className="lg:h-78 flex-1 flex flex-col py-8 lg:py-8 justify-center items-center gap-6 shadow-2xl borders bg-white rounded-2xl min-w-[300px] max-w-[400px]"
                     >
                         <p className="text-xl font-bold">{objective.title}</p>
                         <img src={imgArray[index]} alt={objective.title} className="w-14 h-14" />
