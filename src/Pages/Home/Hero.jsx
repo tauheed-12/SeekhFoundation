@@ -1,13 +1,12 @@
 import React from 'react';
 import './Hero.css';
 import { Link } from 'react-router-dom';
-import navlogo from '../../assets/LOGO.png';
 
 const Hero = ({ heading, subheading, isButton }) => {
     return (
         <div className="hero-banner font-poppins">
             <div className="hero-banner__content">
-                <img src={navlogo} className="w-20 h-20" alt='logo' />
+                {/* <img src={navlogo} className="w-20 h-20" alt='logo' /> */}
                 <h1 className="hero-banner__heading">{heading}</h1>
                 <p className="hero-banner__description">
                     {subheading}

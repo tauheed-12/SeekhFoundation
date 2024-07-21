@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import navlogo2 from '../assets/logo2.png';
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import { useState, useEffect } from "react";
+import navlogo from '../assets/LOGO.png';
 
 const Navbar = () => {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -44,12 +45,12 @@ const Navbar = () => {
                     </div>
                 </div>
                 <hr />
-                <div className={` bg-white flex flex-row items-center justify-between px-6 py-2 ${scrolled ? 'fixed top-0 w-full z-50' : ''}`}>
+                <div className={` bg-white flex flex-row items-center justify-between px-2 md:px-6 py-2 ${scrolled ? 'fixed top-0 w-full z-50' : ''}`}>
                     <div className="flex flex-row gap-2 justify-center flex-wrap items-center">
-                        {/* <img src={navlogo} alt="Logo" className="h-12 w-16" /> */}
-                        <img src={navlogo2} alt="" className="h-8 w-[185px] lg:h-12 lg:w-full" />
+                        <img src={navlogo} alt="Logo" className="h-12 w-16" />
+                        <img src={navlogo2} alt="" className="h-8 w-2/3" />
                     </div>
-                    <ul className="hidden md:flex flex-row gap-8 text-lg items-center">
+                    <ul className="hidden lg:flex flex-row gap-8 text-lg items-center">
                         <li>
                             <NavLink to='/' className={({ isActive }) => isActive ? "text-red-800" : "text-black"}>
                                 Home
@@ -77,11 +78,11 @@ const Navbar = () => {
                         </li>
                         <button className="border-solid border-green-600 border-2 px-4 py-2 text-white bg-green-600">Donate Now</button>
                     </ul>
-                    <FiAlignJustify className="flex md:hidden text-2xl" onClick={() => setIsNavbarOpen(true)} aria-label="Open Menu" />
+                    <FiAlignJustify className="flex lg:hidden text-2xl" onClick={() => setIsNavbarOpen(true)} aria-label="Open Menu" />
                 </div>
             </nav>
             <div className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${isNavbarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsNavbarOpen(false)}></div>
-            <nav className={`flex md:hidden fixed top-0 right-0 bg-green-700 text-white h-screen z-50 p-4 pr-8 transition-transform duration-300 ${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <nav className={`flex lg:hidden fixed top-0 right-0 bg-green-700 text-white h-screen z-50 p-4 pr-8 transition-transform duration-300 ${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <FiX className="text-xl mb-4" onClick={() => setIsNavbarOpen(false)} aria-label="Close Menu" />
                 <ul className="flex flex-col gap-4 text-lg items-end justify-start font-semibold">
                     <li>
