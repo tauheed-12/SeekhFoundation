@@ -28,6 +28,18 @@ const AboutUs = () => {
                         and personally, contributing positively to their future and community.</p>
                 </div>
             </div>
+            <div className="flex flex-col md:flex-row justify-center items-center px-2 md:px-10 lg:px-20 py-6 gap-4">
+                <p className="md:flex-1 bg-slate-100 p-4 text-lg text-gray-600 font-poppins">
+                    <span className="text-xl font-black font-poppins mr-2">Vision:</span>To create a world where all humans benefit from education, kindness
+                    pervades every spirit, hope illuminates every path and to cultivate an Empowered
+                    society of collective well-being.
+                </p>
+                <p className="md:flex-1 bg-slate-100 p-4 text-lg text-gray-600 font-poppins">
+                    <span className="text-xl font-black font-poppins mr-2">Mission:</span>Through our initiative, we strive to promote education and ensure it is
+                    accessible to all. We aim to cultivate a culture of compassion, and contribute to build
+                    a society that supports Justice and the overall well-being of its people.
+                </p>
+            </div>
             <div className="flex flex-col justify-center items-center px-3 md:px-4 lg:px-6 py-4 md:py-10">
                 <h2 className="text-3xl text-black font-semibold">Meet <span className="text-green-700">Our Teams</span></h2>
                 <div className="flex flex-row justify-center items-center gap-4 flex-wrap mt-4">

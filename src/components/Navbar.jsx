@@ -1,7 +1,7 @@
 import { IoMdMail } from "react-icons/io";
 import { FaPhoneAlt, FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import navlogo2 from '../assets/logo2.png';
+// import navlogo2 from '../assets/logo2.png';
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import { useState, useEffect } from "react";
 import navlogo from '../assets/LOGO.png';
@@ -48,7 +48,8 @@ const Navbar = () => {
                 <div className={` bg-white flex flex-row items-center justify-between px-2 md:px-6 py-2 ${scrolled ? 'fixed top-0 w-full z-50' : ''}`}>
                     <div className="flex flex-row gap-2 justify-center flex-wrap items-center">
                         <img src={navlogo} alt="Logo" className="h-12 w-16" />
-                        <img src={navlogo2} alt="" className="h-8 w-2/3" />
+                        {/* <img src={navlogo2} alt="" className="h-8 w-2/3" /> */}
+                        <span className="font-poppins text-xl sm:text-2xl md:text-3xl" id="seekh">SEEKH Foundation</span>
                     </div>
                     <ul className="hidden lg:flex flex-row gap-8 text-lg items-center">
                         <li>
