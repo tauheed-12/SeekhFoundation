@@ -11,9 +11,7 @@ const imgArray = [eductionImg, personalImg, documentImg, communityImg, spreadImg
 const Objectives = () => {
     return (
         <div className="flex flex-col justify-center items-center bg-slate-100 py-12">
-            <p className="text-3xl lg:text-4xl font-bold">
-                Our <span className="text-green-700">Objectives</span>
-            </p>
+            <p className="text-2xl md:text-3xl lg:text-4xl font-bold flex flex-row justify-center items-center gap-2"><span>Our</span><span className="text-green-700">Objectives</span></p>
             <div className="flex flex-row px-2 py-8 gap-6 flex-wrap items-center justify-center">
                 {ObjectArray.map((objective, index) => (
                     <div

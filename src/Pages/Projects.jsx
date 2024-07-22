@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <>
       <div className="">
-        <Hero heading="Our Projects" subheading="Introduction to the foundation Projects." isButton={false} />
+        <Hero heading="Our Events" subheading="Introduction to the foundation Events." isButton={false} />
 
         <h1 className="text-3xl md:text-5xl font-bold my-6 text-center">
           <span className="text-black p-1">Our</span> <span className="text-green-700">Events</span>
@@ -44,8 +44,8 @@ const Projects = () => {
         </div> */}
 
         <div className="mb-24 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
-          <h2 className="text-2xl font-semibold w-full text-left">
-            <span className="text-black">Completed</span> <span className="text-green-700">Projects</span>
+          <h2 className="sm:text-xl md:text-2xl font-semibold w-full text-left">
+            <span className="text-black">Completed</span> <span className="text-green-700">Events</span>
           </h2>
           <div className="w-full mb-4">
             <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-700"></div>

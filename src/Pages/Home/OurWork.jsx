@@ -37,7 +37,7 @@ const OurWork = () => {
 
     return (
         <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 md:gap-6 my-6 bg-slate-100 py-3 sm:py-5 md:py-8">
-            <h2 className='text-lg md:text-xl font-semibold text-gray-600'>Our Events</h2>
+            <p className="text-2xl md:text-3xl lg:text-4xl font-bold flex flex-row justify-center items-center gap-2"><span>Our</span><span className="text-green-700">Events</span></p>
             <h2 className="text-2xl md:text-3xl font-semibold text-green-700 font-poppins w-10/12 md:w-2/3 lg:w-1/3 text-center">
                 Check Out Our Latest and Completed Projects
             </h2>
