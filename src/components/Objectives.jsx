@@ -1,10 +1,10 @@
 import React from 'react';
-import { ObjectArray } from '../../Data/Objective';
-import eductionImg from '../../assets/education.jpeg';
-import communityImg from '../../assets/Community.jpeg';
-import documentImg from '../../assets/document.png';
-import personalImg from '../../assets/personalDev.jpeg';
-import spreadImg from '../../assets/spread.jpg';
+import { ObjectArray } from '../Data/Objective';
+import eductionImg from '../assets/education.jpeg';
+import communityImg from '../assets/Community.jpeg';
+import documentImg from '../assets/document.png';
+import personalImg from '../assets/personalDev.jpeg';
+import spreadImg from '../assets/spread.jpg';
 
 const imgArray = [eductionImg, personalImg, documentImg, communityImg, spreadImg];
 

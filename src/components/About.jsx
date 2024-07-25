@@ -1,5 +1,5 @@
 import React from 'react';
-import imgbg from "../../assets/imgbg.png";
+import imgbg from "../assets/imgbg.png";
 import { Link } from 'react-router-dom';
 
 const About = () => {

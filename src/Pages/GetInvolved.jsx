@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import img1 from "../assets/img4.jpg";
 import img3 from "../assets/banner.jpeg";
-import Hero from './Home/Hero';
+import Hero from '../components/Hero';
 
 const InfoBlock = ({ title, paragraphs, listItems, buttonText, imgSrc, imgAlt, reverse }) => (
     <div className={`bg-slate-100 my-4 py-3 sm:py-5 md:py-8 px-4 sm:px-12 md:px-16 rounded-lg flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center mb-12 relative`}>

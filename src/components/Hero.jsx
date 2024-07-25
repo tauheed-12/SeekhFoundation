@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.css';
+import '../css/Hero.css';
 import { Link } from 'react-router-dom';
 
 const Hero = ({ heading, subheading, isButton }) => {

@@ -1,10 +1,10 @@
 import React from 'react';
-import Hero from './Home/Hero';
-import About from './Home/About';
-import Objectives from './Home/Objectives';
-import Mission from './Home/Mission';
-import OurWork from './Home/OurWork';
-import Donate from './Home/Donate';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Objectives from '../components/Objectives';
+import Mission from '../components/Mission';
+import OurWork from '../components/OurWork';
+import Donate from '../components/Donate';
 import { useEffect } from 'react';
 
 const Home = () => {

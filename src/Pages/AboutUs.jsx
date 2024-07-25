@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from './Home/Hero';
+import Hero from '../components/Hero';
 import mission1 from "../assets/img12.jpg";
 import org1 from "../assets/org1.jpg";
 import { useEffect } from 'react';

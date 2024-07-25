@@ -1,6 +1,6 @@
 export const ObjectArray = [{
     img: 'eductionImg',
-    title: 'Education for All:',
+    title: 'Education for All',
     description: 'Ensure every child, regardless of socio-economic background, has access to quality education through school supplies, scholarships, and tutoring support.'
 }, {
     img: 'personalImg',

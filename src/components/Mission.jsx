@@ -1,6 +1,6 @@
 import React from 'react';
-import MissionCard from '../../components/MissionCard';
-import { missionArray } from '../../Data/Mission';
+import MissionCard from './MissionCard';
+import { missionArray } from '../Data/Mission';
 
 const Mission = () => {
     return (

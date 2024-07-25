@@ -7,7 +7,7 @@ import img4 from '../assets/gallery3.jpg';
 import img5 from '../assets/gallery4.jpg';
 import img6 from '../assets/gallery5.jpg';
 import img7 from '../assets/gallery6.jpg';
-import Hero from './Home/Hero';
+import Hero from '../components/Hero';
 
 const Gallery = () => {
     useEffect(() => {

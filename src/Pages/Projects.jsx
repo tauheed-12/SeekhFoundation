@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { allProjects, successStories } from '../Data/Projects';
-import Hero from './Home/Hero';
+import Hero from '../components/Hero';
 
 const Projects = () => {
   useEffect(() => {
