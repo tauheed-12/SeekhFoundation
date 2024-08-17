@@ -8,6 +8,7 @@ module.exports = {
       backgroundColor: {
         saffron: ' #F4C430',
         trombone: '#D2B55B',
+        buttonColor: '#b8cdbf'
       },
       textColor: {
         greenColor: '#039a63'

@@ -13,7 +13,7 @@ const Hero = ({ heading, subheading, isButton }) => {
                 </p>
                 <div className='hero-banner__button'>
                     <Link to='/about'><button className="hero-banner__cta">Learn More</button></Link>
-                    <button className="hero-banner__cta">Join Us</button>
+                    <Link to='https://forms.gle/sAjVd7jhaM2ihXeV6'><button className="hero-banner__cta">Join Us</button></Link>
                 </div>
             </div>
         </div>

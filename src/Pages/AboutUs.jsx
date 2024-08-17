@@ -26,7 +26,7 @@ const AboutUs = () => {
                         <span className="text-xl font-black font-poppins mr-2">Vision:</span>To create a world where all humans benefit from education, kindness
                         pervades every spirit, hope illuminates every path and to cultivate an Empowered
                         society of collective well-being.
-                        <p className="md:flex-1 text-lg text-gray-600 font-poppins">
+                        <p className="md:flex-1 text-lg mt-3 text-gray-600 font-poppins">
                             <span className="text-xl font-black font-poppins mr-2">Mission:</span>Through our initiative, we strive to promote education and ensure it is
                             accessible to all. We aim to cultivate a culture of compassion, and contribute to build
                             a society that supports Justice and the overall well-being of its people.

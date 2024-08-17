@@ -43,13 +43,13 @@ const Footer = () => {
                     <h3 className="text-xl font-semibold">Connect with us</h3>
                     <ul className="flex flex-col gap-2">
                         <li className="cursor-pointer">
-                            <Link>Facebook</Link>
+                            <Link to='https://www.facebook.com/share/tD1xNBWwsxpJx1iU/?mibextid=qi2Omg'>Facebook</Link>
                         </li>
                         <li className="cursor-pointer">
                             <Link to='https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09'>Twitter</Link>
                         </li>
                         <li className="cursor-pointer">
-                            <Link>Instagram</Link>
+                            <Link to='https://www.instagram.com/seekhfoundation?igsh=dnA5emRsOXEzcWlj'>Instagram</Link>
                         </li>
                         <li className="cursor-pointer">
                             <Link to='https://www.linkedin.com/company/seekhfoundation/'>LinkedIn</Link>

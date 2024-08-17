@@ -8,12 +8,12 @@ export const ObjectArray = [{
     description: 'Nurture holistic development by offering workshops on soft skills, mentoring, and extracurricular activities to build self-confidence and communication skills.'
 }, {
     img: 'documentImg',
-    title: 'Document Assistance',
+    title: 'Facilitate Access to Essential Documents',
     description: 'Assist community members in obtaining essential documents such as Aadhaar cards, PAN cards, and ration cards.'
 }, {
     img: 'communityImg',
-    title: 'Community Engagement',
-    description: 'Organize awareness campaigns, workshops for parents, and community events to encourage active participation in a child’s education and development.'
+    title: 'Community Development',
+    description: 'Implement awareness campaigns, conduct workshops for parents, and host community events to foster active involvement in a child’s education and overall development.'
 }, {
     img: 'healtImg',
     title: 'Health For All',

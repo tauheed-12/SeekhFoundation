@@ -5,18 +5,18 @@ import education from '../assets/educations.jpeg';
 
 export const missionArray = [{
     imgName: government,
-    title: 'Government Scheme Unawareness',
-    description: 'There is a lack of awareness about government schemes and programs that could significantly benefit the community.'
+    title: 'Raising Awareness on Government Schemes',
+    description: 'The communities faces a significant gap in understanding and accessing government schemes and programs that could offer substantial benefits. Our initiative focuses on educating and informing community members about these opportunities.'
 }, {
     imgName: document,
-    title: 'Lack of Basic Documents',
-    description: 'Many community members lack essential documents such as Aadhaar, accessing various government services and opportunities.'
+    title: 'Facilitating Access to Essential Documents',
+    description: 'Many individuals in the communities lack basic documents which are crucial for accessing government services and opportunities. We work to assist community members in obtaining these essential documents.'
 }, {
     imgName: education,
-    title: 'Limited Access to Education',
-    description: ' Marginalized  have limited access to quality education, hindering their overall development and future prospects.'
+    title: 'Enhancing Access to Education',
+    description: 'Children in the communities have limited access to quality education, which is vital for their overall development and future opportunities. Our efforts aim to improve educational access and resources for these individuals.'
 }, {
     imgName: job,
-    title: 'Informal Job Profiles',
-    description: "The community primarily consists of daily wage workers,ERickshaw drivers, house helpers, and vendors, making them vulnerable to economic instability"
+    title: 'Supporting Informal Workers',
+    description: "The majority of the community consists of daily wage workers, E-Rickshaw drivers, house helpers, and vendors, leaving them susceptible to economic instability. Our initiative seeks to support and uplift these informal workers, helping them achieve greater economic security."
 }];
