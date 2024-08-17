@@ -1,12 +1,15 @@
-import Home from "./Pages/Home";
-import Navbar from "./components/Navbar";
-import './App.css'
-import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
-import AboutUs from "./Pages/AboutUs";
-import Projects from "./Pages/Projects";
-import GetInvolved from "./Pages/GetInvolved";
-import Gallery from "./Pages/Gallery";
+
+import './App.css'
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import Home from "./Pages/HomePage";
+import AboutUs from "./Pages/AboutUsPage";
+import Projects from "./Pages/OurWorksPage";
+import GetInvolved from "./Pages/GetInvolvedPage";
+import Gallery from "./Pages/GalleryPage";
 
 function App() {
   return (

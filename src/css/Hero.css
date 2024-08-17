@@ -34,6 +34,7 @@
     outline: rgb(16, 177, 16);
     display: inline-block;
     padding: 10px 25px;
+    border-radius: 15px;
     text-align: center;
     cursor: pointer;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;

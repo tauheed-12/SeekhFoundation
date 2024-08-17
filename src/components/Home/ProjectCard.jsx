@@ -3,7 +3,7 @@ import { MdOutlineDateRange, MdGroups2 } from "react-icons/md";
 
 const ProjectCard = ({ imgSrc, tag, title, description, date, author }) => {
     return (
-        <div className="flex flex-col md:flex-row lg:flex-col bg-white rounded-lg p-2 md:p-3 lg:p-4 max-w-full lg:max-w-[500px]">
+        <div className="flex flex-col md:flex-row lg:flex-col bg-slate-100 rounded-lg p-2 md:p-3 lg:p-4 max-w-full lg:max-w-[500px]">
             <div className="flex-1 flex justify-center items-center overflow-hidden">
                 <img src={imgSrc} alt={title} className="object-cover" />
             </div>

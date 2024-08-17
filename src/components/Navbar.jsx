@@ -52,76 +52,77 @@ const Navbar = () => {
                     </div>
                     <ul className="hidden lg:flex flex-row gap-8 text-lg items-center font-poppins">
                         <li>
-                            <NavLink to='/' className={({ isActive }) => isActive ? "text-red-800" : "text-black"}>
+                            <NavLink to='/' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
                                 Home
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/about' className={({ isActive }) => isActive ? "text-red-800" : "text-black"}>
+                            <NavLink to='/about' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
                                 About
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/projects' className={({ isActive }) => isActive ? "text-red-800" : "text-black"}>
+                            <NavLink to='/projects' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
                                 Our Works
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/getInvolved' className={({ isActive }) => isActive ? "text-red-800" : "text-black"}>
+                            <NavLink to='/getInvolved' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
                                 Get Involved
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/gallery' className={({ isActive }) => isActive ? "text-red-900" : "text-black"}>
+                            <NavLink to='/gallery' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
                                 Gallery
                             </NavLink>
                         </li>
-                        <button className="border-solid border-green-600 border-2 px-4 py-2 text-white bg-green-600">Donate Now</button>
+                        <button className="border-solid border-green-600 border-2 px-4 py-2 text-white bg-green-950 rounded-md">Donate Now</button>
                     </ul>
                     <FiAlignJustify className="flex lg:hidden text-2xl" onClick={() => setIsNavbarOpen(true)} aria-label="Open Menu" />
                 </div>
             </nav>
             <div className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${isNavbarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsNavbarOpen(false)}></div>
-            <nav className={`flex lg:hidden fixed top-0 right-0 bg-green-700 text-white h-screen z-50 p-4 pr-8 transition-transform duration-300 ${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                <FiX className="text-xl mb-4" onClick={() => setIsNavbarOpen(false)} aria-label="Close Menu" />
-                <ul className="flex flex-col gap-4 text-lg items-end justify-start font-semibold">
+            <nav className={`flex font-poppins lg:hidden fixed top-0 right-0 bg-green-700 text-white h-screen z-50 p-4 pr-8 transition-transform duration-300 ${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <ul className="flex flex-col gap-4 text-lg items-start justify-start">
                     <li>
                         <NavLink to='/'
-                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
                             onClick={() => setIsNavbarOpen(false)}>
                             Home
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to='/about'
-                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
                             onClick={() => setIsNavbarOpen(false)}>
                             About
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to='/projects'
-                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
                             onClick={() => setIsNavbarOpen(false)}>
-                            Projects
+                            Our Works
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to='/getInvolved'
-                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
                             onClick={() => setIsNavbarOpen(false)}>
                             Get Involved
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to='/gallery'
-                            className={({ isActive }) => isActive ? "text-red-900" : "text-white"}
+                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
                             onClick={() => setIsNavbarOpen(false)}>
                             Gallery
                         </NavLink>
                     </li>
-                    <button className="border-solid border-white border-2 bg-green-900 px-2 md:px-4 py-1 md:py-2">Donate Now</button>
+                    <hr className="border-solid border-t-2" />
+                    <button className="border-solid text-white rounded-lg  bg-green-950 px-2 md:px-4 py-1 md:py-2">Donate Now</button>
                 </ul>
+                <FiX className="text-3xl mb-4" onClick={() => setIsNavbarOpen(false)} aria-label="Close Menu" />
             </nav>
         </div>
     );

@@ -8,7 +8,6 @@ const Projects = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
-  // const ongoingProjects = allProjects.filter(project => project.status === 'ongoing');
   const completedProjects = allProjects.filter(project => project.status === 'completed');
 
   return (
