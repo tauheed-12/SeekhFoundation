@@ -52,27 +52,27 @@ const Navbar = () => {
                     </div>
                     <ul className="hidden lg:flex flex-row gap-8 text-lg items-center font-poppins">
                         <li>
-                            <NavLink to='/' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
+                            <NavLink to='/' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
                                 Home
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/about' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
+                            <NavLink to='/about' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
                                 About
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/projects' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
+                            <NavLink to='/projects' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
                                 Our Works
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/getInvolved' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
+                            <NavLink to='/getInvolved' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
                                 Get Involved
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/gallery' className={({ isActive }) => isActive ? "text-green-950" : "text-black"}>
+                            <NavLink to='/gallery' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
                                 Gallery
                             </NavLink>
                         </li>

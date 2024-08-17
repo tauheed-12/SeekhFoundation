@@ -30,7 +30,7 @@ const Gallery = () => {
                 <h1 className="text-3xl font-bold mb-8 text-center">Gallery</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {images.map((image, index) => (
-                        <div key={index} className="w-full h-64 bg-gray-200">
+                        <div key={index} className="w-full h-64 bg-gray-200" data-aos="fade-up">
                             <img src={image} alt={`img${index}`} className="w-full h-full object-cover" />
                         </div>
                     ))}

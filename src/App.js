@@ -1,5 +1,8 @@
 import { Route, Routes } from "react-router-dom";
+import AOS from "aos";
+import { useEffect } from "react";
 
+import "aos/dist/aos.css";
 import './App.css'
 
 import Navbar from "./components/Navbar";
@@ -11,7 +14,19 @@ import Projects from "./Pages/OurWorksPage";
 import GetInvolved from "./Pages/GetInvolvedPage";
 import Gallery from "./Pages/GalleryPage";
 
+
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      // disable: "phone",
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
+
   return (
     <div className="App">
       <Navbar />

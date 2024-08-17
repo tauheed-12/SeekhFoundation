@@ -6,7 +6,7 @@ import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
 
 const InfoBlock = ({ title, paragraphs, listItems, buttonText, imgSrc, imgAlt, reverse }) => (
-    <div className={`bg-slate-100 my-4 py-3 sm:py-5 md:py-8 px-4 sm:px-12 md:px-16 rounded-lg flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center mb-12 relative`}>
+    <div className={`bg-slate-100 my-4 py-3 sm:py-5 md:py-8 px-4 sm:px-12 md:px-16 rounded-lg flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center mb-12 relative`} data-aos="fade-up">
         <div className="flex-1 mb-6">
             <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg shadow-lg object-cover md:h-96 hover:scale-105 transition-transform duration-300" />
         </div>

@@ -3,7 +3,7 @@ import img from '../../assets/im14.jpg';
 
 const DonateSection = () => {
     return (
-        <div className='flex bg-slate-100 flex-col lg:flex-row justify-center items-center lg:space-x-8 p-8 lg:p-16'>
+        <div className='flex bg-slate-100 flex-col lg:flex-row justify-center items-center lg:space-x-8 p-8 lg:p-16' data-aos="fade-up">
             <div className='flex-1 mb-8 lg:mb-0'>
                 <img src={img} alt='Be the Light' className='w-full h-auto max-w-sm mx-auto rounded-lg shadow-lg' />
             </div>

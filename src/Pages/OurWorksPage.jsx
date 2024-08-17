@@ -51,7 +51,7 @@ const Projects = () => {
           </div>
           <div className="flex justify-center items-center gap-4 flex-wrap flex-row">
             {completedProjects.map((project, id) => (
-              <div key={id} className='flex flex-row justify-center items-center mt-5 bg-slate-200'>
+              <div key={id} className='flex flex-row justify-center items-center mt-5 bg-slate-200' data-aos="fade-up">
                 <div className={`bg-${project.id % 2 === 0 ? 'white' : 'gray-100'}  rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col md:flex-row justify-center items-center`}>
                   <div className="bg-slate-300 flex-1 flex justify-center items-center h-full">
                     <img src={project.imageUrl} alt={project.title} className="rounded-t-lg transition duration-300 transform hover:scale-105" />

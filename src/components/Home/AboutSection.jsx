@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
     return (
-        <div className="w-full flex flex-col lg:flex-row justify-center items-center flex-wrap py-12 bg-slate-100">
+        <div className="w-full flex flex-col lg:flex-row justify-center items-center flex-wrap py-12 bg-slate-100" data-aos="fade-up">
             <div className='w-full md:w-2/3 flex flex-col lg:flex-row justify-center items-center flex-wrap '>
                 <div className="flex-1 flex justify-end items-center p-8 md:p-0">
                     <img src={imgbg} alt='imgbg' />

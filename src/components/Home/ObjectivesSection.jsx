@@ -10,7 +10,7 @@ const imgArray = [eductionImg, personalImg, documentImg, communityImg, spreadImg
 
 const ObjectivesSection = () => {
     return (
-        <div className="flex flex-col justify-center items-center py-12">
+        <div className="flex flex-col justify-center items-center py-12" data-aos="fade-up">
             <p className="text-2xl md:text-3xl lg:text-4xl font-bold flex flex-row 
             justify-center items-center gap-2">
                 <span>Our</span>
@@ -22,8 +22,8 @@ const ObjectivesSection = () => {
                 {ObjectArray.map((objective, index) => (
                     <div
                         key={index}
-                        className="lg:h-72 flex-1 flex flex-col py-8 lg:py-8 justify-center 
-                        items-center gap-6 md:shadow-2xl borders bg-white rounded-2xl min-w-[300px] 
+                        className="lg:h-72 flex-1 flex flex-col py-4 lg:py-8 justify-center 
+                        items-center gap-6 md:shadow-2xl borders bg-slate-100 rounded-2xl min-w-[300px] 
                         max-w-[400px]"
                     >
                         <p className="text-xl font-bold text-center">{objective.title}</p>

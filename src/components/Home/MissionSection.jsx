@@ -4,7 +4,7 @@ import { missionArray } from '../../Data/Mission';
 
 const MissionSection = () => {
     return (
-        <div className="w-full flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 py-8">
+        <div className="w-full flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 py-8" data-aos="fade-up">
             <p className="text-2xl md:text-3xl lg:text-4xl font-bold flex flex-row justify-center items-center gap-2"><span>Our</span><span className="text-green-700">Works</span></p>
             <p className="text-slate-600 text-center text-lg font-poppins">
                 Our Community Empowerment Initiatives includes

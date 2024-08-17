@@ -7,7 +7,7 @@ import works from '../../Data/OurWorks';
 
 const OurWorkSection = () => {
     return (
-        <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 md:gap-6 my-6  py-3 sm:py-5 md:py-8">
+        <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 md:gap-6 my-6  py-3 sm:py-5 md:py-8" data-aos="fade-up">
             <p className="text-2xl md:text-3xl lg:text-4xl font-bold flex flex-row justify-center items-center gap-2"><span>Our</span><span className="text-green-700">Works</span></p>
             <h2 className="text-lg md:text-xl font-poppins w-10/12 md:w-2/3 lg:w-1/3 text-center">
                 Check Out Our Latest and Completed Projects
