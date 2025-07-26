@@ -13,6 +13,7 @@ import AboutUs from "./Pages/AboutUsPage";
 import Projects from "./Pages/OurWorksPage";
 import GetInvolved from "./Pages/GetInvolvedPage";
 import Gallery from "./Pages/GalleryPage";
+import Test from "./Test";
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
       </Routes>
       <Footer />
     </div>
+    // <div>
+    // <Test/>
+    // </div>
   );
 }
 
