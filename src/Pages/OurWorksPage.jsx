@@ -1,14 +1,25 @@
 import React from 'react';
 import { useEffect } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { allProjects } from '../Data/Projects';
 import Hero from '../components/Hero';
+import { GET_ALL_WORK } from '../api/worksSection/workApi';
+import { useQuery } from '@apollo/client';
 
 const Projects = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    
   }, [])
-  const completedProjects = allProjects.filter(project => project.status === 'completed');
+  const { data, loading, error } = useQuery(GET_ALL_WORK)
+
+
+  console.log(data)
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+  
+  const completedProjects=data?.workSchemas
 
   return (
     <>
@@ -54,11 +65,11 @@ const Projects = () => {
               <div key={id} className='flex flex-row justify-center items-center mt-5 bg-slate-200' data-aos="fade-up">
                 <div className={`bg-${project.id % 2 === 0 ? 'white' : 'gray-100'}  rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col md:flex-row justify-center items-center`}>
                   <div className="bg-slate-300 flex-1 flex justify-center items-center h-full">
-                    <img src={project.imageUrl} alt={project.title} className="rounded-t-lg transition duration-300 transform hover:scale-105" />
+                    <img src={project.workAssets.url} alt={project.workHeading} className="rounded-t-lg transition duration-300 transform hover:scale-105" />
                   </div>
                   <div className="flex-[2] px-4 h-full flex flex-col justify-center items-center p-4">
-                    <h3 className="text-2xl font-bold mb-4 text-green-600">{project.title}</h3>
-                    <p className="text-gray-700 text-md mb-6">{project.description}</p>
+                    <h3 className="text-2xl font-bold mb-4 text-green-600">{project.workHeading}</h3>
+                    <p className="text-gray-700 text-md mb-6">{project.workContent}</p>
                     {/* <button className="bg-green-700 text-white px-4 py-2 rounded-full text-sm hover:bg-green-900 transition duration-300">Learn More</button> */}
                   </div>
                 </div>
