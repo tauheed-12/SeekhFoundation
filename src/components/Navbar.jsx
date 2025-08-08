@@ -24,107 +24,92 @@ const Navbar = () => {
 
     return (
         <div className="relative">
-            <nav className="font-poppins">
-                <div className="hidden md:flex flex-row items-center justify-between px-6 py-0">
-                    <div className="flex flex-row items-center">
-                        <div className="flex flex-row items-center gap-2">
-                            <IoMdMail /><span className="text-gray-600">foundationseekh@gmail.com</span>
-                        </div>
-                        <div className="border-l-black border-solid border-l-2 h-4 m-4"></div>
-                        <div className="flex flex-row items-center gap-2">
-                            <FaPhoneAlt /><span className="text-gray-600">+91 7530860796</span>
-                        </div>
-                        <div className="border-l-black border-solid border-l-2 h-4 m-4"></div>
-                        <div className="text-gray-600">FAQs</div>
+            <nav className="font-poppins text-sm text-gray-700">
+                {/* Top Bar */}
+                <div className="hidden md:flex justify-between items-center px-6 py-2 bg-gray-50 border-b border-gray-200">
+                <div className="flex items-center gap-6">
+                    <Link to="mailto:foundationseekh@gmail.com" className="flex items-center gap-2 text-gray-600 hover:text-green-700">
+                    <IoMdMail />
+                    foundationseekh@gmail.com
+                    </Link>
+                    <span className="h-4 border-l border-gray-400"></span>
+                    <div className="flex items-center gap-2 text-gray-600">
+                    <FaPhoneAlt />
+                    +91 7530860796
                     </div>
-                    <div className="flex flex-row items-center gap-2">
-                        <Link to=''><FaFacebook /></Link>
-                        <Link to='https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09'><FaTwitter /></Link>
-                        <Link to='https://www.linkedin.com/company/seekhfoundation/'><FaLinkedin /></Link>
-                        <Link><FaInstagram /></Link>
-                    </div>
+                    <span className="h-4 border-l border-gray-400"></span>
+                    <Link to="#" className="hover:text-green-700">FAQs</Link>
                 </div>
-                <hr />
-                <div className={` bg-white flex flex-row items-center justify-between px-2 md:px-6 py-2 ${scrolled ? 'fixed top-0 w-full z-50' : ''}`}>
-                    <div className="flex flex-row gap-2 justify-center flex-wrap items-center">
-                        <img src={navlogo} alt="Logo" className="h-12 w-16" />
-                        <img src={navlogo2} alt="" className="h-8 w-2/3" />
-                    </div>
-                    <ul className="hidden lg:flex flex-row gap-8 text-lg items-center font-poppins">
-                        <li>
-                            <NavLink to='/' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
-                                Home
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/about' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
-                                About
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/projects' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
-                                Our Works
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/getInvolved' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
-                                Get Involved
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/gallery' className={({ isActive }) => isActive ? "text-green-800" : "text-black"}>
-                                Gallery
-                            </NavLink>
-                        </li>
-                        <button className="border-solid border-green-600 border-2 px-4 py-2 text-white bg-green-950 rounded-md">Donate Now</button>
-                    </ul>
-                    <FiAlignJustify className="flex lg:hidden text-2xl" onClick={() => setIsNavbarOpen(true)} aria-label="Open Menu" />
+                <div className="flex gap-4 text-lg text-gray-600">
+                    <Link to="#" className="hover:text-blue-600"><FaFacebook /></Link>
+                    <Link to="https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09" className="hover:text-blue-500"><FaTwitter /></Link>
+                    <Link to="https://www.linkedin.com/company/seekhfoundation/" className="hover:text-blue-700"><FaLinkedin /></Link>
+                    <Link to="#" className="hover:text-pink-500"><FaInstagram /></Link>
                 </div>
-            </nav>
-            <div className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${isNavbarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsNavbarOpen(false)}></div>
-            <nav className={`flex font-poppins lg:hidden fixed top-0 right-0 bg-green-700 text-white h-screen z-50 p-4 pr-8 transition-transform duration-300 ${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                <ul className="flex flex-col gap-4 text-lg items-start justify-start">
-                    <li>
-                        <NavLink to='/'
-                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
-                            onClick={() => setIsNavbarOpen(false)}>
-                            Home
+                </div>
+
+                {/* Main Navbar */}
+                <div className={`bg-white shadow-sm px-4 md:px-6 py-3 flex justify-between items-center ${scrolled ? 'fixed top-0 left-0 w-full z-50' : ''}`}>
+                {/* Logo */}
+                <Link to={'/'} className="flex items-center gap-2">
+                    <img src={navlogo} alt="Logo" className="h-10 w-14" />
+                    <img src={navlogo2} alt="Logo Text" className="h-8 max-w-[250px]" />
+                </Link>
+
+                {/* Desktop Nav */}
+                <ul className="hidden lg:flex gap-8 items-center text-base">
+                    {["Home", "About", "Our Works", "Get Involved", "Gallery"].map((text, idx) => (
+                    <li key={idx}>
+                        <NavLink
+                        to={text === "Home" ? "/" : `/${text.replace(/\s+/g, '').toLowerCase()}`}
+                        className={({ isActive }) => isActive ? "text-green-800 font-medium" : "text-gray-800 hover:text-green-700"}
+                        >
+                        {text}
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to='/about'
-                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
-                            onClick={() => setIsNavbarOpen(false)}>
-                            About
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/projects'
-                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
-                            onClick={() => setIsNavbarOpen(false)}>
-                            Our Works
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/getInvolved'
-                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
-                            onClick={() => setIsNavbarOpen(false)}>
-                            Get Involved
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/gallery'
-                            className={({ isActive }) => isActive ? "text-green-950" : "text-white"}
-                            onClick={() => setIsNavbarOpen(false)}>
-                            Gallery
-                        </NavLink>
-                    </li>
-                    <hr className="border-solid border-t-2" />
-                    <button className="border-solid text-white rounded-lg  bg-green-950 px-2 md:px-4 py-1 md:py-2">Donate Now</button>
+                    ))}
+                    <button
+                    className="px-3 py-1 text-lg font-bold text-green-600 bg-radial from-white to-white hover:from-green-600 hover:to-green-200 hover:text-white rounded-2xl transition duration-200 cursor-pointer"
+                    >
+                    Donate Now
+                    </button>
                 </ul>
-                <FiX className="text-3xl mb-4" onClick={() => setIsNavbarOpen(false)} aria-label="Close Menu" />
+
+                {/* Mobile Menu Icon */}
+                <FiAlignJustify className="lg:hidden text-2xl cursor-pointer" onClick={() => setIsNavbarOpen(true)} />
+                </div>
             </nav>
-        </div>
+
+            {/* Backdrop */}
+            <div
+                className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${isNavbarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                onClick={() => setIsNavbarOpen(false)}
+            ></div>
+
+            {/* Mobile Sidebar Nav */}
+            <nav className={`fixed top-0 right-0 w-3/4 sm:w-2/5 bg-green-700 text-white h-screen z-50 p-6 flex flex-col justify-start transition-transform duration-300 ${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className="flex justify-between items-center mb-6">
+                <span className="text-xl font-semibold">Menu</span>
+                <FiX className="text-3xl cursor-pointer" onClick={() => setIsNavbarOpen(false)} />
+                </div>
+                <ul className="flex flex-col gap-4 text-lg">
+                {["Home", "About", "Our Works", "Get Involved", "Gallery"].map((text, idx) => (
+                    <li key={idx}>
+                    <NavLink
+                        to={text === "Home" ? "/" : `/${text.replace(/\s+/g, '').toLowerCase()}`}
+                        className={({ isActive }) => isActive ? "text-green-300 font-medium" : "text-white hover:text-green-200"}
+                        onClick={() => setIsNavbarOpen(false)}
+                    >
+                        {text}
+                    </NavLink>
+                    </li>
+                ))}
+                </ul>
+                <button className="mt-6 w-full px-4 py-2 bg-green-900 hover:bg-green-800 text-white rounded-lg transition duration-200">
+                Donate Now
+                </button>
+            </nav>
+            </div>
     );
 }
 
