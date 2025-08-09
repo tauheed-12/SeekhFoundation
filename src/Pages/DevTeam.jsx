@@ -10,12 +10,12 @@ export default function DevTeam() {
         Development Team
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
         {devteamarray.map((member, index) => (
             <Link
             to={member.socialLink}
             key={index}
-            className="flex flex-col items-center w-[70vw] md:w-[30%] bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 p-6"
+            className="flex flex-col items-center w-[70vw] md:w-[80%] bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 p-6"
             >
             {/* Image on Top */}
             <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
@@ -34,6 +34,7 @@ export default function DevTeam() {
             </Link>
         ))}
         </div>
+
     </section>
   );
 }
