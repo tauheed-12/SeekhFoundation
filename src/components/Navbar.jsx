@@ -5,6 +5,7 @@ import navlogo2 from '../assets/logo2.png';
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import { useState, useEffect } from "react";
 import navlogo from '../assets/LOGO.png';
+import '../css/Hero.css';
 
 const Navbar = () => {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -41,10 +42,10 @@ const Navbar = () => {
                     <Link to="#" className="hover:text-green-700">FAQs</Link>
                 </div>
                 <div className="flex gap-4 text-lg text-gray-600">
-                    <Link to="#" className="hover:text-blue-600"><FaFacebook /></Link>
+                    <Link to="https://www.facebook.com/share/tD1xNBWwsxpJx1iU/?mibextid=qi2Omg" className="hover:text-blue-600"><FaFacebook /></Link>
                     <Link to="https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09" className="hover:text-blue-500"><FaTwitter /></Link>
                     <Link to="https://www.linkedin.com/company/seekhfoundation/" className="hover:text-blue-700"><FaLinkedin /></Link>
-                    <Link to="#" className="hover:text-pink-500"><FaInstagram /></Link>
+                    <Link to="https://www.instagram.com/seekhfoundation?igsh=dnA5emRsOXEzcWlj" className="hover:text-pink-500"><FaInstagram /></Link>
                 </div>
                 </div>
 
@@ -68,11 +69,12 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     ))}
-                    <button
-                    className="px-3 py-1 text-lg font-bold text-green-600 bg-radial from-white to-white hover:from-green-600 hover:to-green-200 hover:text-white rounded-2xl transition duration-200 cursor-pointer"
+                    <Link
+                    to={'/donate'}
+                    className="hero-cta !px-4 !py-2"
                     >
                     Donate Now
-                    </button>
+                    </Link>
                 </ul>
 
                 {/* Mobile Menu Icon */}

@@ -1,100 +1,72 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Hero from '../components/Hero';
 import { GET_ALL_WORK } from '../api/worksSection/workApi';
 import { useQuery } from '@apollo/client';
 
 const Projects = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
 
-    
-  }, [])
-  const { data, loading, error } = useQuery(GET_ALL_WORK)
+  const { data, loading, error } = useQuery(GET_ALL_WORK);
 
+  if (loading) return <p className="text-center text-gray-500 py-8">Loading...</p>;
+  if (error) return <p className="text-center text-red-600 py-8">Error: {error.message}</p>;
 
-  console.log(data)
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-  
-  const completedProjects=data?.workSchemas
+  const completedProjects = data?.workSchemas || [];
 
   return (
     <>
-      <div className="">
-        <Hero heading="Our Works" subheading="Introduction to the foundation Events." isButton={false} />
+      {/* Hero Section */}
+      <Hero heading="Our Works" subheading="Introduction to the foundation Events." isButton={false} />
 
-        <h1 className="text-3xl md:text-5xl font-bold my-6 text-center">
-          <span className="text-black p-1">Our</span> <span className="text-green-700">Works</span>
+      {/* Section Heading */}
+      <div className="w-full text-center !mt-8 !mb-12 px-4">
+        <h1 className="text-3xl md:text-5xl font-extrabold">
+          <span className="text-black">Our</span>{' '}
+          <span className="text-green-700">Works</span>
         </h1>
-
-        {/* <div className="mb-14 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
-          <h2 className="text-2xl font-semibold w-full text-left">
-            <span className="text-black">Ongoing</span> <span className="text-green-700">Projects</span>
-          </h2>
-          <div className="w-full mb-4">
-            <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-700"></div>
-          </div>
-          <div className="flex justify-center items-center flex-wrap lg:flex-nowrap gap-4 flex-row">
-            {ongoingProjects.map((project, id) => (
-              <div key={id} className='flex flex-col justify-center items-center'>
-                <div className={`bg-${project.id % 2 === 0 ? 'white' : 'gray-100'} shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition duration-300`}>
-                  <img src={project.imageUrl} alt={project.title} className="w-full h-44 object-cover rounded-t-lg transition duration-300 transform hover:scale-105" />
-                  <div className="py-4 px-4 flex flex-col justify-center items-center">
-                    <h3 className="text-2xl font-bold mb-4 text-green-600">{project.title}</h3>
-                    <p className="text-gray-700 text-md mb-6">{project.description}</p>
-                    <button className="bg-green-700 text-white px-4 py-2 rounded-full text-sm hover:bg-green-900 transition duration-300">Learn More</button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
-        <div className="mb-24 flex flex-col justify-center items-center py-4 px-4 sm:px-12 md:px-20">
-          <h2 className="sm:text-xl md:text-2xl font-semibold w-full text-left">
-            <span className="text-black">Completed</span> <span className="text-green-700">Works</span>
-          </h2>
-          <div className="w-full mb-4">
-            <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-700"></div>
-          </div>
-          <div className="flex justify-center items-center gap-4 flex-wrap flex-row">
-            {completedProjects.map((project, id) => (
-              <div key={id} className='flex flex-row justify-center items-center mt-5 bg-slate-200' data-aos="fade-up">
-                <div className={`bg-${project.id % 2 === 0 ? 'white' : 'gray-100'}  rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col md:flex-row justify-center items-center`}>
-                  <div className="bg-slate-300 flex-1 flex justify-center items-center h-full">
-                    <img src={project.workAssets.url} alt={project.workHeading} className="rounded-t-lg transition duration-300 transform hover:scale-105" />
-                  </div>
-                  <div className="flex-[2] px-4 h-full flex flex-col justify-center items-center p-4">
-                    <h3 className="text-2xl font-bold mb-4 text-green-600">{project.workHeading}</h3>
-                    <p className="text-gray-700 text-md mb-6">{project.workContent}</p>
-                    {/* <button className="bg-green-700 text-white px-4 py-2 rounded-full text-sm hover:bg-green-900 transition duration-300">Learn More</button> */}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <p className="mt-3 text-gray-600 mx-auto text-lg">
+          Explore our completed projects that showcase our dedication and impact.
+        </p>
       </div>
 
-      {/* <section className="max-w-5xl mx-auto bg-white p-8 rounded-lg mb-24">
-        <h2 className="text-4xl font-semibold mb-8 text-center">
-          <span className="text-black p-1">Success</span> <span className="text-green-700">Stories</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {successStories.map((story, id) => (
-            <div key={id} className="flex flex-col justify-center items-center bg-gray-200 shadow-xl rounded-lg hover:shadow-2xl transition duration-300">
-              <img src={story.imageUrl} alt={story.name} className="w-24 h-24 object-cover rounded-full transition duration-300 transform hover:scale-105 -mt-8 z-10" />
-              <div className="p-4">
-                <h3 className="text-2xl font-bold mb-2 text-green-600">{story.name}</h3>
-                <p className="text-gray-700 text-base mb-4">{story.story}</p>
+      {/* Completed Projects */}
+      <section className="mb-24 px-4 sm:px-8 md:px-16 !mb-10">
+        <div className="flex flex-col gap-4">
+          <h2 className="sm:text-xl md:text-2xl font-semibold">
+            <span className="text-black">Completed</span>{' '}
+            <span className="text-green-700">Works</span>
+          </h2>
+          <div className="w-[100px] h-1 bg-green-700 hover:w-[150px] transition-all duration-500 !mb-6"></div>
+        </div>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {completedProjects.map((project, id) => (
+            <div
+              key={id}
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
+              data-aos="fade-up"
+            >
+              {/* Image */}
+              <div className="overflow-hidden bg-gray-200">
+                <img
+                  src={project.workAssets?.url}
+                  alt={project.workHeading}
+                  className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-col flex-1 p-5">
+                <h3 className="text-xl font-bold text-green-700 mb-3">{project.workHeading}</h3>
+                <p className="text-gray-700 flex-1">{project.workContent}</p>
               </div>
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
     </>
   );
 };

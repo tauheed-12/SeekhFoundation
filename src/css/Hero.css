@@ -1,64 +1,92 @@
 .hero-banner {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("../assets/banner.jpg") center/cover no-repeat;
     width: 100%;
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
-    justify-content: center;
-}
-
-.hero-banner__content {
-    padding: 20px 30px;
-    color: white;
-    display: inline-flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.hero-banner__heading {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.hero-banner__button {
-    display: flex;
-    gap: 20px;
-}
-
-.hero-banner__cta {
-    background-color: green;
-    color: white;
-    border: rgb(14, 176, 14);
-    outline: rgb(16, 177, 16);
-    display: inline-block;
-    padding: 10px 25px;
-    border-radius: 15px;
+.hero-content {
     text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+    animation: slideUp 1s ease-in-out;
+}
+
+.hero-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+    line-height: 1.6;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-cta {
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.hero-banner__cta:hover {
-    background-color: rgb(36, 203, 36);
-    box-shadow: inset 200px 0 0 0 #033422;
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.5);
 }
 
-.hero-banner {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("../assets/banner.jpg");
+.hero-cta.secondary {
+    background: transparent;
+    border: 2px solid #22c55e;
 }
 
-@media screen and (max-width:729px) {
-    .hero-banner__content {
-        padding: 10px 20px;
-        gap: 10px;
+.hero-cta.secondary:hover {
+    background: #22c55e;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 729px) {
+    .hero-heading {
+        font-size: 2.2rem;
     }
-
-    .hero-banner__heading {
-        font-size: 2.0rem;
-        display: block;
+    .hero-subheading {
+        font-size: 1rem;
+    }
+    .hero-banner {
+        min-height: 400px;
     }
 }
