@@ -14,6 +14,8 @@ import Projects from "./Pages/OurWorksPage";
 import GetInvolved from "./Pages/GetInvolvedPage";
 import Gallery from "./Pages/GalleryPage";
 import Test from "./Test";
+import DonateSection from "./components/Home/DonateSection";
+import DevTeam from "./Pages/DevTeam";
 
 
 function App() {
@@ -34,9 +36,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<AboutUs />}></Route>
-        <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/ourworks" element={<Projects />}></Route>
         <Route path="/getInvolved" element={<GetInvolved />}></Route>
         <Route path="/gallery" element={<Gallery />}></Route>
+        <Route path="/donate" element={<DonateSection />}></Route>
+        <Route path="/dev-team" element={<DevTeam />}></Route>
       </Routes>
       <Footer />
     </div>

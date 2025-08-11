@@ -1,67 +1,69 @@
 import React from 'react';
 import logoimg from '../assets/LOGO.png';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div>
-            <div className="flex flex-row flex-wrap lg:flex-nowrap gap-5 justify-between px-6 py-8 bg-slate-200 font-poppins">
-                <div className="flex flex-col gap-3">
-                    <img src={logoimg} className="w-12 h-12" alt='footer img' />
-                    <p className="text-xl font-semibold text-gray-700">Join us in making a difference in the lives of those in need</p>
-                    <p><span className="text-xl font-bold mr-2">Addresss:</span>C-48,4th Floor, Abul Fazal Enclave-1, High Tension Road,Jamia Nagar, Okhla, South Delhi- 110025</p>
-                    <p><span className="text-xl font-bold mr-2">Phone</span>+91 7530860796</p>
-                    <p><span className="text-xl font-bold mr-2">Email</span>foundationseekh@gmail.com</p>
+        <footer className="bg-slate-500 text-white font-poppins">
+            {/* Main Footer Content */}
+            <div className="flex justify-between px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-gray-700">
+                
+                {/* Logo & Address */}
+                <div className="space-y-4">
+                    <Link to={'/'}><img src={logoimg} className="h-14" alt="footer logo" /></Link>
+                    <p className="text-lg font-semibold text-white">
+                        Join us in making a difference in the lives of those in need.
+                    </p>
+                    <Link to={'https://maps.app.goo.gl/7mH91tcJ9YPjFY4p9'}><span className="font-bold">Address:</span> <span className='hover:text-green-400'>C-48, 4th Floor, Abul Fazal Enclave-1, High Tension Road, Jamia Nagar, Okhla, South Delhi - 110025</span></Link>
+                    <p><span className="font-bold">Phone:</span> +91 7530860796</p>
+                    <Link to="mailto:foundationseekh@gmail.com"><span className="font-bold">Email:</span> <span className='hover:text-green-400'>foundationseekh@gmail.com</span></Link>
                 </div>
-                <div className="flex flex-col gap-3">
-                    <h3 className="text-xl font-semibold">Quick Links</h3>
-                    <ul className="flex flex-col gap-2">
-                        <li className="cursor-pointer">
-                            <Link to='/'>Home</Link>
-                        </li>
-                        <li className="cursor-pointer">
-                            <Link to='/about'>About</Link>
-                        </li>
-                        <li className="cursor-pointer">
-                            <Link to='/projects'>Projects</Link>
-                        </li>
-                        <li className="cursor-pointer">
-                            <Link to='/getInvolved'>Get Involved</Link>
-                        </li>
+
+                {/* Quick Links */}
+                <div>
+                    <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
+                    <ul className="space-y-2">
+                        {['Home', 'About', 'Projects', 'Get Involved'].map((item, i) => (
+                            <li key={i}>
+                                <Link to={`/${item.replace(/\s+/g, '')}`} className="hover:text-green-400 transition-colors">
+                                    {item}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
-                <div className="flex flex-col gap-3">
-                    <h3 className="text-xl font-semibold">Supports</h3>
-                    <ul className="flex flex-col gap-2">
-                        <li className="cursor-pointer">Help & FAQ</li>
-                        <li className="cursor-pointer">Causes</li>
-                        <li className="cursor-pointer">Events</li>
-                        <li className="cursor-pointer">Contact Us</li>
+
+                {/* Support */}
+                <div>
+                    <h3 className="text-xl font-semibold text-white mb-4">Support</h3>
+                    <ul className="space-y-2">
+                        {['Help & FAQ', 'Causes', 'Events', 'Contact Us'].map((item, i) => (
+                            <li key={i} className="hover:text-green-400 transition-colors cursor-pointer">
+                                {item}
+                            </li>
+                        ))}
                     </ul>
                 </div>
-                <div className="flex flex-col gap-3">
-                    <h3 className="text-xl font-semibold">Connect with us</h3>
-                    <ul className="flex flex-col gap-2">
-                        <li className="cursor-pointer">
-                            <Link to='https://www.facebook.com/share/tD1xNBWwsxpJx1iU/?mibextid=qi2Omg'>Facebook</Link>
-                        </li>
-                        <li className="cursor-pointer">
-                            <Link to='https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09'>Twitter</Link>
-                        </li>
-                        <li className="cursor-pointer">
-                            <Link to='https://www.instagram.com/seekhfoundation?igsh=dnA5emRsOXEzcWlj'>Instagram</Link>
-                        </li>
-                        <li className="cursor-pointer">
-                            <Link to='https://www.linkedin.com/company/seekhfoundation/'>LinkedIn</Link>
-                        </li>
-                    </ul>
+
+                {/* Social Media */}
+                <div>
+                    <h3 className="text-xl font-semibold text-white mb-4">Connect with Us</h3>
+                    <div className="flex gap-3 text-2xl">
+                        <Link to="https://www.facebook.com/share/tD1xNBWwsxpJx1iU/?mibextid=qi2Omg" className="hover:text-blue-600"><FaFacebook /></Link>
+                        <Link to="https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09" className="hover:text-blue-500"><FaTwitter /></Link>
+                        <Link to="https://www.linkedin.com/company/seekhfoundation/" className="hover:text-blue-700"><FaLinkedin /></Link>
+                        <Link to="https://www.instagram.com/seekhfoundation?igsh=dnA5emRsOXEzcWlj" className="hover:text-pink-500"><FaInstagram /></Link>
+                    </div>
                 </div>
             </div>
-            <div className="flex justify-center items-center py-6 bg-green-700 text-white font-poppins px-3">
-                <p>Designed and developed with love by Mohd Tauheed</p>
+
+            {/* Bottom Bar */}
+            <div className="py-4 text-center text-sm bg-green-700 text-white">
+                <Link to={'/dev-team'} className='font-poppins '>Meet the Development Team</Link>
             </div>
-        </div>
+        </footer>
     );
-}
+};
 
 export default Footer;
