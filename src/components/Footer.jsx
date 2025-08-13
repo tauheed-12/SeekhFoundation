@@ -1,7 +1,8 @@
 import React from 'react';
 import logoimg from '../assets/LOGO.png';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -51,7 +52,7 @@ const Footer = () => {
                     <h3 className="text-xl font-semibold text-white mb-4">Connect with Us</h3>
                     <div className="flex gap-3 text-2xl">
                         <Link to="https://www.facebook.com/share/tD1xNBWwsxpJx1iU/?mibextid=qi2Omg" className="hover:text-blue-600"><FaFacebook /></Link>
-                        <Link to="https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09" className="hover:text-blue-500"><FaTwitter /></Link>
+                        <Link to="https://x.com/SEEKHFoundation?t=81Bk2vVDgMYbx4eu53-l-A&s=09" className="hover:text-blue-500"><FaXTwitter /></Link>
                         <Link to="https://www.linkedin.com/company/seekhfoundation/" className="hover:text-blue-700"><FaLinkedin /></Link>
                         <Link to="https://www.instagram.com/seekhfoundation?igsh=dnA5emRsOXEzcWlj" className="hover:text-pink-500"><FaInstagram /></Link>
                     </div>
