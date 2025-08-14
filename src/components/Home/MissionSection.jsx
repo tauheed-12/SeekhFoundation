@@ -21,7 +21,7 @@ const MissionSection = () => {
             </div>
 
             {/* Cards Container */}
-            <div className="px-20 flex flex-wrap justify-center gap-8">
+            <div className="px-5 flex flex-wrap justify-center gap-8">
                 {missionArray.map((mission, id) => (
                     <MissionCard 
                         key={id} 

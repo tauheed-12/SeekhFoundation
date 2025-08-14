@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="relative">
             <nav className="font-poppins text-sm text-gray-700">
                 {/* Top Bar */}
-                <div className="hidden md:flex justify-between items-center px-6 py-2 bg-gray-50 border-b border-gray-200">
+                {/* <div className="hidden md:flex justify-between items-center px-6 py-2 bg-gray-50 border-b border-gray-200">
                 <div className="flex items-center gap-6">
                     <Link to="mailto:foundationseekh@gmail.com" className="flex items-center gap-2 text-gray-600 hover:text-green-700">
                     <IoMdMail />
@@ -47,7 +47,7 @@ const Navbar = () => {
                     <Link to="https://www.linkedin.com/company/seekhfoundation/" className="hover:text-blue-700"><FaLinkedin /></Link>
                     <Link to="https://www.instagram.com/seekhfoundation?igsh=dnA5emRsOXEzcWlj" className="hover:text-pink-500"><FaInstagram /></Link>
                 </div>
-                </div>
+                </div> */}
 
                 {/* Main Navbar */}
                 <div className={`bg-white shadow-sm px-4 md:px-6 py-3 flex justify-between items-center ${scrolled ? 'fixed top-0 left-0 w-full z-50' : ''}`}>
